@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <title>L6_C - culori</title>
+</head>
+<body>
+
+<h1 id="titlu">Laboratorul de JavaScript</h1>
+
+<p id="par">Prima linie de text<br>
+A doua linie de text<br>
+A treia linie de text</p>
+
+<script>
+// Verifică dacă textul e o culoare CSS validă
+function culoareValida(c) {
+    var test = document.createElement("div");
+    test.style.color = c;
+    return test.style.color !== "";
+}
+
+document.getElementById("titlu").onclick = function () {
+    var c = prompt("Culoarea textului titlului:", "red");
+    if (c === null) return;            // Cancel: nu facem nimic
+    if (culoareValida(c)) {
+        this.style.color = c;
+    } else {
+        alert("Culoare incorectă: " + c);
+    }
+};
+
+document.getElementById("par").onclick = function () {
+    var c = prompt("Culoarea de fundal a paragrafului:", "yellow");
+    if (c === null) return;
+    if (culoareValida(c)) {
+        this.style.backgroundColor = c;
+    } else {
+        alert("Culoare incorectă: " + c);
+    }
+};
+</script>
+
+</body>
+</html>

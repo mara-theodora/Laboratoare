@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercițiul 4 - L6_C</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h1 {
+            cursor: pointer;
+            color: #333;
+        }
+
+        p {
+            cursor: pointer;
+            line-height: 1.6;
+            max-width: 500px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="titlu">Titlu Principal de Test</h1>
+
+    <p id="paragraf">
+        Acesta este un paragraf care conține text distribuit pe mai multe linii pentru a îndeplini cerința. 
+        Aici puteți da clic pentru a schimba culoarea de fundal folosind un prompt și validarea CSS.
+    </p>
+
+    <script>
+        const titlu = document.getElementById('titlu');
+        const paragraf = document.getElementById('paragraf');
+
+        titlu.addEventListener('click', function() {
+            let culoare = prompt("Introduceți o culoare pentru titlu:");
+            if (culoare !== null) {
+                if (CSS.supports("color", culoare)) {
+                    titlu.style.color = culoare;
+                } else {
+                    alert("Culoare incorectă!");
+                }
+            }
+        });
+
+        paragraf.addEventListener('click', function() {
+            let culoare = prompt("Introduceți o culoare de fundal pentru paragraf:");
+            if (culoare !== null) {
+                if (CSS.supports("color", culoare)) {
+                    paragraf.style.backgroundColor = culoare;
+                } else {
+                    alert("Culoare incorectă!");
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

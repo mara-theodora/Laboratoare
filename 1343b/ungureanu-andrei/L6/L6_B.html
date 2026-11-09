@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Laborator 6 - B</title>
+
+    <style>
+        #p1 {
+            color: green;
+        }
+
+        #p2 {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="schimbaTextele()">Schimba textele</button>
+
+    <p id="p1" onclick="modificaText(this)">
+        Acesta este primul paragraf.
+    </p>
+
+    <p id="p2" onclick="modificaText(this)">
+        Acesta este al doilea paragraf.
+    </p>
+
+    <script>
+        function modificaText(paragraf) {
+            let textNou = prompt("Introduceti textul nou:");
+
+            if (textNou !== null) {
+                paragraf.innerHTML = textNou;
+            }
+        }
+
+        function schimbaTextele() {
+            let p1 = document.getElementById("p1");
+            let p2 = document.getElementById("p2");
+
+            let auxiliar = p1.innerHTML;
+            p1.innerHTML = p2.innerHTML;
+            p2.innerHTML = auxiliar;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<body>
+
+<h1 onclick=myfunction() id="ttl">Un titlu de cateva cuvinte</h1>
+
+<p id="p" onclick=yourfunction()>
+    <br>Aceste este un paragraf <br>
+    <br> De cateva <br>
+    <br>Randuriii<br>
+</p>
+
+<script>
+    function myfunction(){
+    var cul = prompt("Introduceti noua culoare de fundal a titlului:");
+   document.getElementById('ttl').style.color=cul;
+    }
+    function yourfunction(){
+    var cul = prompt("Introduceti noua culoare de fundal a paragrafului:");
+   document.getElementById('p').style.background=cul;
+    }
+    
+</script>
+
+
+</body>
+</html> 

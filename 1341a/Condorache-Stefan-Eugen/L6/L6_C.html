@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Laborator 6 - L6_C</title>
+</head>
+<body>
+
+<h1 id="titlu" style="cursor: pointer;">Titlu de câteva cuvinte</h1>
+
+<p id="paragraf" style="cursor: pointer; padding: 10px;">
+    Aceasta este prima linie a paragrafului.<br>
+    Aceasta este a doua linie de text.<br>
+    Iar aceasta este a treia linie.
+</p>
+
+<script>
+var titlu = document.getElementById("titlu");
+var paragraf = document.getElementById("paragraf");
+
+// Clic pe titlu -> schimbă culoarea textului
+titlu.onclick = function () {
+    var c = prompt("Introduceți o culoare pentru textul titlului (ex: red, #ff0000, blue):");
+    if (c !== null) {
+        c = c.trim();
+        if (c !== "" && CSS.supports("color", c)) {
+            this.style.color = c;
+        } else {
+            alert("Culoare incorectă! Nu s-a modificat nimic.");
+        }
+    }
+};
+
+// Clic pe paragraf -> schimbă culoarea de fundal
+paragraf.onclick = function () {
+    var c = prompt("Introduceți o culoare de fundal pentru paragraf (ex: yellow, #00ff00, lightblue):");
+    if (c !== null) {
+        c = c.trim();
+        if (c !== "" && CSS.supports("color", c)) {
+            this.style.backgroundColor = c;
+        } else {
+            alert("Culoare incorectă! Nu s-a modificat nimic.");
+        }
+    }
+};
+</script>
+
+</body>
+</html>

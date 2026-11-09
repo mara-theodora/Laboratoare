@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Laborator 6 - Exercițiul 4 (L6_C)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        h1 {
+            cursor: pointer;
+            width: fit-content;
+            transition: color 0.3s ease;
+        }
+
+        #paragraf {
+            cursor: pointer;
+            line-height: 1.6;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            width: fit-content;
+            max-width: 550px;
+            background-color: #ffffff;
+            transition: background-color 0.3s ease;
+        }
+
+        .indicatie {
+            font-size: 13px;
+            color: #777;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="titlu">Programarea Aplicațiilor Web și DOM</h1>
+
+    <p id="paragraf">
+        Aceasta este prima linie de text a paragrafului.<br>
+        Aceasta este a doua linie, generată pentru exercițiu.<br>
+        Aceasta este a treia linie: dați clic pentru a schimba culoarea de fundal!
+    </p>
+
+    <script>
+        var titlu = document.getElementById("titlu");
+        var paragraf = document.getElementById("paragraf");
+
+        titlu.onclick = function () {
+            var c = prompt("Introduceți o culoare pentru textul titlului:", "blue");
+            if (c !== null) {
+                c = c.trim();
+                if (c !== "" && CSS.supports("color", c)) {
+                    this.style.color = c;
+                } else {
+                    alert("Culoarea introdusă («" + c + "») nu este validă!");
+                }
+            }
+        };
+
+        paragraf.onclick = function () {
+            var c = prompt("Introduceți o culoare pentru fundalul paragrafului:", "lightyellow");
+            if (c !== null) {
+                c = c.trim();
+                if (c !== "" && CSS.supports("color", c)) {
+                    this.style.backgroundColor = c;
+                } else {
+                    alert("Culoarea introdusă («" + c + "») nu este validă!");
+                }
+            }
+        };
+    </script>
+
+</body>
+
+</html>

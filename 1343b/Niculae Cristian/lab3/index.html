@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Laboratoarele mele</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        /* Eliminăm bulinele și spațierea prestabilită a listei */
+        .meniu-principala {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px; /* Spațiu între butoane */
+        }
+
+        /* Stilul uniform pentru toate butoanele */
+        .meniu-principala li a {
+            display: inline-block;
+            width: 240px;            /* Lățime fixă egală pentru toate butoanele */
+            padding: 12px 15px;
+            background-color: #2c3e50;/* Culoare uniformă de fundal (albastru închis) */
+            color: white;             /* Text alb */
+            text-decoration: none;    /* Fără subliniere */
+            border-radius: 8px;       /* Colțuri rotunjite */
+            text-align: center;       /* Text centrat pe buton */
+            font-weight: bold;
+            font-size: 14px;
+            box-sizing: border-box;   /* Asigură menținerea dimenusiunilor exacte */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        /* Schimbarea culorii la trecerea cursorului (:hover) */
+        .meniu-principala li a:hover {
+            background-color: #e67e22; /* Schimbare în portocaliu la hover */
+            transform: translateY(-2px);/* Ușor efect de ridicare */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Laboratoarele mele</h1>
+
+    <ul class="meniu-principala">
+        <li><a href="FormtareText.html">Formatare Text</a></li>
+        <li><a href="FormtareText_external.html">External</a></li>
+        <li><a href="FormtareText_inline.html">Inline</a></li>
+        <li><a href="FormtareText_internal.html">Internal</a></li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Bonus</title>
+</head>
+<body>
+
+    <h3>Galerie cu imagini</h3>
+    <hr />
+    
+    <img id="galerie" class="galerie" src="img/pisici.jpg" alt="Se schimba" width="160" height="120">
+    
+    <p id="status" class="status-text">Imaginea 1 din 4</p>
+    
+    <button id="btn-back">Înapoi</button>
+    <button id="btn-next">Înainte</button>
+
+    <script>
+        var imgElement = document.getElementsByClassName("galerie")[0];
+        
+        var startPos = 0;
+        var statusElement = document.getElementById("status");
+        var btnBack = document.getElementById("btn-back");
+        var btnNext = document.getElementById("btn-next");
+
+        var imagini = ["img/pisici.jpg", "img/caini.jpg", "img/mare.jpg", "img/munti.jpg"];
+
+        function updatePosition(pos) {
+            startPos = (startPos + pos + imagini.length) % imagini.length;
+            
+            imgElement.src = imagini[startPos];
+            
+            statusElement.innerHTML = "Imaginea " + (startPos + 1) + " din " + imagini.length;
+        }
+
+        btnBack.onclick = function() { updatePosition(-1); };
+        btnNext.onclick = function() { updatePosition(1); };
+    </script>
+
+</body>
+</html>

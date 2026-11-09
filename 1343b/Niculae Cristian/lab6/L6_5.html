@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Modificare folosind clase si evenimente
+</title>
+</head>
+<body>
+<h3> Utilizati Javascript si HTML DOM pentru a inlocui imaginile de mai jos asa cum este indicat in textele de deasupra lor</h3>
+La click vor aparea Pisici
+<hr />
+<img class="animal" src="pesti.jpg" alt="Niste pesti" width="160" height="120">
+<br /> <br />
+La mouseover vor aparea Munti
+<hr />
+<img class="peisaj" src="desert.jpg" alt="O jungla" width="160" height="120">
+<br /> <br />
+La click vor aparea Caini
+<hr />
+<img class="animal" src="egrete.jpg" alt="Niste egrete" width="160" height="120">
+<br /> <br />
+la mouseout va aparea o Mare
+<hr />
+<img class="peisaj" src="jungla.jpg" alt="Un desert" width="160" height="120">
+
+<script>
+// Utilizati getElementsByClassName() pentru a modifica imaginile pentru a se potrivi cu textele de deasupra lor la aparitia evenimentelor indicate!
+
+// 1. Selectare elemente după clasă
+var animale = document.getElementsByClassName("animal");
+var peisaje = document.getElementsByClassName("peisaj");
+
+// 2. Prima imagine "animal" (Pisici) - la click
+if (animale.length > 0) {
+    animale[0].addEventListener("click", function() {
+        this.src = "Img/pisici.jpg";
+    });
+}
+
+// 3. Prima imagine "peisaj" (Munți) - la mouseover
+if (peisaje.length > 0) {
+    peisaje[0].addEventListener("mouseover", function() {
+        this.src = "Img/munti.jpg";
+    });
+}
+
+// 4. A doua imagine "animal" (Câini) - la click
+if (animale.length > 1) {
+    animale[1].addEventListener("click", function() {
+        this.src = "Img/caini.jpg";
+    });
+}
+
+// 5. A doua imagine "peisaj" (Mare) - la mouseout
+if (peisaje.length > 1) {
+    peisaje[1].addEventListener("mouseout", function() {
+        this.src = "Img/mare.jpg";
+    });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>L6_C</title>
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+  <h1 id="titlu">Schimbarea culorilor paginii</h1>
+  <p id="paragraf">aici avem text<br>
+    aici avem alt text<br>
+    aici avem ultimul text</p>
+
+  <script>
+    function esteCuloareValida(culoare) {
+      const elementTest = document.createElement("span");
+      elementTest.style.color = "";
+      elementTest.style.color = culoare;
+      return elementTest.style.color !== "";
+    }
+
+    document.getElementById("titlu").addEventListener("click", (eveniment) => {
+      const culoare = prompt("Introduceti culoarea textului titlului:");
+      if (culoare === null || culoare.trim() === "") {
+        return;
+      }
+
+      if (esteCuloareValida(culoare)) {
+        eveniment.currentTarget.style.color = culoare;
+      } else {
+        alert("Culoare incorecta: " + culoare);
+      }
+    });
+
+    document.getElementById("paragraf").addEventListener("click", (eveniment) => {
+      const culoare = prompt("Introduceti culoarea de fundal:");
+      if (culoare === null || culoare.trim() === "") {
+        return;
+      }
+
+      if (esteCuloareValida(culoare)) {
+        eveniment.currentTarget.style.backgroundColor = culoare;
+      } else {
+        alert("Culoare incorecta: " + culoare);
+      }
+    });
+  </script>
+</body>
+</html>

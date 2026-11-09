@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercițiul 3 - Lab 6</title>
+    <style>
+        p {
+            cursor: pointer;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 4px;
+        }
+        #p1 {
+            background-color: #e3f2fd;
+            color: #0d47a1;
+            font-weight: bold;
+        }
+        #p2 {
+            background-color: #e8f5e9;
+            color: #1b5e20;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btnSchimba">Schimbă conținutul între ele</button>
+
+
+    <p id="p1">Acesta este primul paragraf. Dă clic aici pentru a-l modifica.</p>
+    <p id="p2">Acesta este al doilea paragraf. Dă clic aici pentru a-l modifica.</p>
+
+    <script>
+        var p1 = document.getElementById("p1");
+        var p2 = document.getElementById("p2");
+        var btn = document.getElementById("btnSchimba");
+
+        p1.onclick = function() {
+            var textNou = prompt("Introduceți noul text pentru primul paragraf:", p1.innerHTML);
+            if (textNou !== null && textNou !== "") {
+                p1.innerHTML = textNou;
+            }
+        };
+
+        p2.onclick = function() {
+            var textNou = prompt("Introduceți noul text pentru al doilea paragraf:", p2.innerHTML);
+            if (textNou !== null && textNou !== "") {
+                p2.innerHTML = textNou;
+            }
+        };
+
+        btn.onclick = function() {
+            var temp = p1.innerHTML;
+            p1.innerHTML = p2.innerHTML;
+            p2.innerHTML = temp;
+        };
+    </script>
+
+</body>
+</html>

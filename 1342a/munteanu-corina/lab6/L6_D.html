@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Galerie foto JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        img {
+            width: 400px;
+            height: 300px;
+            object-fit: contain;
+            display: block;
+            margin: 20px auto;
+        }
+
+        button {
+            padding: 10px 25px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #numar {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Galerie foto</h1>
+
+    <img id="poza" src="Img/pisici.jpg" alt="Imagine din galerie">
+
+    <p id="numar">Imaginea 1 din 4</p>
+
+    <button id="inapoi">Inapoi</button>
+
+    <button id="inainte">Inainte</button>
+
+    <script>
+        var imagini = [
+            "Img/pisici.jpg",
+            "Img/caini.jpg",
+            "Img/munti.jpg",
+            "Img/mare.jpg"
+        ];
+
+        var pozitie = 0;
+
+        var poza = document.getElementById("poza");
+        var numar = document.getElementById("numar");
+
+        var butonInapoi = document.getElementById("inapoi");
+        var butonInainte = document.getElementById("inainte");
+
+
+        function actualizare() {
+            poza.src = imagini[pozitie];
+
+            numar.textContent =
+                "Imaginea " + (pozitie + 1) + " din " + imagini.length;
+        }
+
+
+        butonInainte.onclick = function () {
+            pozitie = (pozitie + 1) % imagini.length;
+
+            actualizare();
+        };
+
+
+        butonInapoi.onclick = function () {
+            pozitie = (pozitie - 1 + imagini.length) % imagini.length;
+
+            actualizare();
+        };
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+<title>L6_B</title>
+</head>
+<body>
+
+<button onclick="interschimba()">Interschimba paragrafe</button>
+
+<p id="p1" style="color: blue;" onclick="schimba(this)">Primul paragraf (click pentru modificare)</p>
+<p id="p2" style="color: red;" onclick="schimba(this)">Al doilea paragraf (click pentru modificare)</p>
+
+<script>
+function schimba(el) {
+    var textNou = prompt("Introduceti noul text:", el.innerHTML);
+    if (textNou !== null && textNou !== "") {
+        el.innerHTML = textNou;
+    }
+}
+
+function interschimba() {
+    var p1 = document.getElementById("p1");
+    var p2 = document.getElementById("p2");
+    var aux = p1.innerHTML;
+    p1.innerHTML = p2.innerHTML;
+    p2.innerHTML = aux;
+}
+</script>
+
+</body>
+</html>

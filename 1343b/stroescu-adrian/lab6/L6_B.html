@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Laborator 6 - Exercițiul 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        button {
+            padding: 8px 16px;
+            font-size: 15px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        #p1 {
+            color: #cde298;
+            background-color: #200ded;
+            padding: 16px;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        #p2 {
+            color: #fff200;
+            background-color: #f50808;
+            padding: 16px;
+            font-size: 20px;
+            font-style: italic;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    #p1:hover, #p2:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btnSchimba">Schimbă conținutul paragrafelor</button>
+
+    <p id="p1">Primul paragraf. Dă clic pentru eidtare.</p>
+    <p id="p2">Al doilea paragraf. Dă clic pentru editare.</p>
+
+    <script>
+        function editeazaParagraf(el) {
+            const textNou = prompt("Introduceți noul text:", el.innerText);
+            if (textNou !== null && textNou.trim() !== "") {
+                el.innerText = textNou;
+            }
+        }
+
+        const p1 = document.getElementById("p1");
+        const p2 = document.getElementById("p2");
+        const btn = document.getElementById("btnSchimba");
+
+        p1.addEventListener("click", function() {
+            editeazaParagraf(this);
+        });
+
+        p2.addEventListener("click", function() {
+            editeazaParagraf(this);
+        });
+
+        btn.addEventListener("click", function() {
+            const aux = p1.innerHTML;
+            p1.innerHTML = p2.innerHTML;
+            p2.innerHTML = aux;
+        });
+    </script>
+
+</body>
+</html>

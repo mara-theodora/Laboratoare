@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>L6- ex B</title>
+
+</head>
+<body>
+
+<h1>Modificarea paragrafelor la Click</h1>
+
+
+
+<button id="butt" type="button" onclick=yourfunction()>Apasa-ma!</button>
+
+<p style="background-color:red; color:aliceblue;font-size: 200%;" id="demo1" onclick=myfunction()>Ana are mere</p>
+<p style="background-color:pink; color:black;font-size: 130%;" id="demo2" onclick=myfunctionn()>Mere are Ana</p> 
+<script>
+    function myfunction(){
+    var text = prompt("Introduceți noul text al paragrafului:");
+    if (text !== null && text !== "") {
+     document.getElementById("demo1").innerHTML = text;
+    }}
+    
+    function myfunctionn(){
+    var text = prompt("Introduceți noul text al paragrafului:");
+    if (text !== null && text !== "") {
+     document.getElementById("demo2").innerHTML = text;     
+    }}  
+    function yourfunction(){
+        var copie=document.getElementById("demo1").innerHTML;
+        document.getElementById("demo1").innerHTML = document.getElementById("demo2").innerHTML;
+        document.getElementById("demo2").innerHTML = copie;
+    }  
+    </script>
+</body>
+</html> 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercițiul 4 - L6_C</title>
+</head>
+<body>
+
+    <h1 id="titluScurt">Acesta este un titlu</h1>
+    <p id="paragrafTreiLinii">
+        Aceasta este prima linie.<br>
+        Aceasta este a doua linie.<br>
+        Aceasta este a treia linie.
+    </p>
+
+    <script>
+        document.getElementById("titluScurt").onclick = function() {
+            var culoare = prompt("Introduceți o culoare pentru textul titlului (ex: red, #00ff00):");
+            if (culoare !== null && culoare !== "") {
+                if (CSS.supports("color", culoare)) {
+                    this.style.color = culoare;
+                } else {
+                    alert("Culoarea introdusă este incorectă!");
+                }
+            }
+        };
+
+        document.getElementById("paragrafTreiLinii").onclick = function() {
+            var culoareBg = prompt("Introduceți o culoare de fundal pentru paragraf:");
+            if (culoareBg !== null && culoareBg !== "") {
+                if (CSS.supports("background-color", culoareBg) || CSS.supports("color", culoareBg)) {
+                    this.style.backgroundColor = culoareBg;
+                } else {
+                    alert("Culoarea introdusă este incorectă!");
+                }
+            }
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<body>
+
+<h1 onclick=myfunction() id="titlu">Titlu</h1>
+
+<p id="p" onclick=yourfunction()>
+    <br> text 1 <br>
+    <br>text 2 <br>
+    <br>text 3<br>
+</p>
+
+<script>
+    function myfunction(){
+    var cul = prompt("Ce culoare doresti sa fie fundalul?");
+   document.getElementById('titlu').style.color=cul;
+    }
+    function yourfunction(){
+    var cul = prompt("Ce culoare doresti sa fie fundalul?");
+   document.getElementById('p').style.background=cul;
+    }
+    
+</script>
+
+
+</body>
+</html> 

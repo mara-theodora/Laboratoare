@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercițiul 4</title>
+</head>
+<body>
+    <h1 id="titlu">Titlu paginii</h1>
+    <p id="text">Linia 1<br>Linia 2<br>Linia 3</p>
+    <script>
+        let titlu = document.getElementById("titlu");
+        let text = document.getElementById("text");
+
+        titlu.onclick = function() {
+            let culoare = prompt("Introduceti culoarea pt text:");
+            if (culoare !== null) {
+                if (CSS.supports("color", culoare)) {
+                    titlu.style.color = culoare;
+                } else {
+                    alert("Culoare invalidă!");
+                }
+            }
+        };
+
+        text.onclick = function() {
+            let culoare = prompt("Introduceti o culoare pt fundal");
+            if (culoare !== null) {
+                if (CSS.supports("background-color", culoare)) {
+                    text.style.backgroundColor = culoare;
+                } else {
+                    alert("Culoare invalidă!");
+                }
+            }
+        };
+    </script>
+</body>
+</html>

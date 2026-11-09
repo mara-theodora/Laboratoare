@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function TextColor() {
+    color_chosen = prompt("Salut, spune ce culoare doresti!")    
+    if (CSS.supports("color",color_chosen)){
+        var x = document.getElementById("colourable_text");
+        x.style.color = color_chosen;
+
+    }
+    else{
+        window.alert("Culoarea este invalida");
+    }
+
+}
+function BackgroundColor() {
+    color_chosen = prompt("Salut, spune ce culoare doresti!")    
+    if (CSS.supports("color",color_chosen)){
+        var x = document.getElementById("colourable_background");
+        x.style.backgroundColor = color_chosen;
+
+    }
+    else{
+        window.alert("Culoarea este invalida");
+    }
+
+}
+</script>
+
+<h1 id="colourable_text"  type="button" onclick="TextColor()"> Un header oarecare</h1>
+<p id="colourable_background" type="button" onclick="BackgroundColor()">Salutare, <br /> oameni buni! <br /> A treia linie de rand</p>
+
+
+</body>
+</html>

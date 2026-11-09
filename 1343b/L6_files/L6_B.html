@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button id="btn">Schimba continutul</button>
+<p id="p1">Primul paragraf</p>
+<p id="p2">Al doilea paragraf</p>
+
+<script>
+var p1 = document.getElementById("p1");
+var p2 = document.getElementById("p2");
+
+p1.onclick = function() {
+    var text = prompt("Introduce textul nou 1:", p1.innerHTML);
+    if (text !== null && text !== "") p1.innerHTML = text;
+};
+
+p2.onclick = function() {
+    var text = prompt("Introduce textul nou 2:", p2.innerHTML);
+    if (text !== null && text !== "") p2.innerHTML = text;
+};
+
+document.getElementById("btn").onclick = function() {
+    var aux = p1.innerHTML;
+    p1.innerHTML = p2.innerHTML;
+    p2.innerHTML = aux;
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<img id="galerie" src="Img/pisici.jpg" width="400" alt="Galerie">
+<br>
+<button onclick="navigheaza(-1)">Inapoi</button>
+<button onclick="navigheaza(1)">Inainte</button>
+<p id="contor">Imaginea 1 din 4</p>
+
+<script>
+var imagini = ["Img/pisici.jpg", "Img/caini.jpg", "Img/munti.jpg", "Img/mare.jpg"];
+var index = 0;
+
+function navigheaza(pas) {
+    index = index + pas;
+    if (index < 0) {
+        index = imagini.length - 1;
+    } else {
+        index = index % imagini.length;
+    }
+    document.getElementById("galerie").src = imagini[index];
+    document.getElementById("contor").innerHTML = "Imaginea " + (index + 1) + " din " + imagini.length;
+}
+</script>
+</body>
+</html>

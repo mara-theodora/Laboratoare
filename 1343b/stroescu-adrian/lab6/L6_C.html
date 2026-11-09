@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Laborator 6 - Exercițiul 4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        h1 {
+            cursor: pointer;
+            display: inline-block;
+            user-select: none;
+            transition: color 0.2s ease;
+        }
+
+        p {
+            cursor: pointer;
+            padding: 15px;
+            border: 1px solid #4df106;
+            line-height: 1.6;
+            max-width: 600px;
+            user-select: none;
+            transition: background-color 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="titlu">Titlu Interactiv</h1>
+
+    <p id="paragraf">
+    Text de test<br>
+    Clic pentru fundal<br>
+    Doar culori CSS valide
+</p>
+
+    <script>
+        const titlu = document.getElementById("titlu");
+        const paragraf = document.getElementById("paragraf");
+        titlu.addEventListener("click", function () {
+            const culoare = prompt("Introduceți culoarea pentru textul titlului:");
+
+            if (culoare === null || culoare.trim() === "") {
+                return;
+            }
+
+            const valoare = culoare.trim();
+
+            if (CSS.supports("color", valoare)) {
+                titlu.style.color = valoare;
+            } else {
+                alert("Eroare: Valoarea introdusă („" + valoare + "”) nu este o culoare CSS validă!");
+            }
+        });
+        paragraf.addEventListener("click", function () {
+            const culoare = prompt("Introduceți culoarea de fundal pentru paragraf:");
+
+            if (culoare === null || culoare.trim() === "") {
+                return;
+            }
+
+            const valoare = culoare.trim();
+
+            if (CSS.supports("color", valoare)) {
+                paragraf.style.backgroundColor = valoare;
+            } else {
+                alert("Eroare: Valoarea introdusă („" + valoare + "”) nu este o culoare CSS validă!");
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercițiul 3 - Lab 6</title>
+    <style>
+        #p1 {
+            color: rgb(243, 120, 216);
+            font-weight: bold;
+            background-color: #eef;
+            padding: 8px;
+        }
+        #p2 {
+            color: rgb(240, 162, 17);
+            font-style: italic;
+            background-color: #efe;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btnSchimba">Schimbă conținutul paragrafelor</button>
+
+    <p id="p1">Sunt studenta in anul 4 la FSA.</p>
+    <p id="p2">Suntem in semestrul 1 al anului 4.</p>
+
+    <script>
+
+        document.getElementById("p1").onclick = function () {
+            var textNou = prompt("Introduceți textul nou pentru primul paragraf:", this.innerHTML);
+            if (textNou !== null) {
+                this.innerHTML = textNou;
+            }
+        };
+
+        document.getElementById("p2").onclick = function () {
+            var textNou = prompt("Introduceți textul nou pentru al doilea paragraf:", this.innerHTML);
+            if (textNou !== null) {
+                this.innerHTML = textNou;
+            }
+        };
+
+        document.getElementById("btnSchimba").onclick = function () {
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+
+            var temp = p1.innerHTML;
+            
+            p1.innerHTML = p2.innerHTML;
+            p2.innerHTML = temp;
+        };
+    </script>
+
+</body>
+</html>

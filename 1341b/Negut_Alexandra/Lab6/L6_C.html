@@ -1,0 +1,26 @@
+<html>
+
+<body>
+
+<h1 id="titlu" onclick = schimbCuloareTitlu()>Titlu </h1>
+
+<p id = "paragraf" onclick=schimbParagraf()>paragraf 1 <br>
+    paragraf 2 <br>
+    paragraf 3
+</p>
+
+
+
+<script>
+    function schimbCuloareTitlu(){
+        var culoareTitlu = prompt("Ce culoare vrei sa fie titlul?")
+        document.getElementById("titlu").style.color = culoareTitlu
+    }
+
+    function schimbParagraf(){
+        var culoareParagraf = prompt("Ce culoare vrei sa fie paragraful?")
+        document.getElementById("paragraf").style.backgroundColor = culoareParagraf
+    }
+</script>
+</body>
+</html>  

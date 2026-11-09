@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercitiul 4</title>
+
+    <style>
+        h1 {
+            cursor: pointer;
+        }
+
+        p {
+            cursor: pointer;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 onclick="schimbaCuloareTitlu()">
+        Acesta este un titlu
+    </h1>
+
+    <p onclick="schimbaFundal()">
+        prima linie<br>
+        a doua linie<br>
+        a treia linie
+    </p>
+
+    <script>
+        function culoareValida(c) {
+            return CSS.supports("color", c);
+        }
+
+        function schimbaCuloareTitlu() {
+            let culoare = prompt("culoarea textului:");
+
+            if (culoare === null) 
+                return;
+            
+            if (culoareValida(culoare)) {
+                document.querySelector("h1").style.color = culoare;
+            } else {
+                alert("Culoare incorecta!");
+            }
+        }
+
+        function schimbaFundal() {
+            let culoare = prompt("culoarea de fundal:");
+
+            if (culoare === null)
+                return;
+        
+
+            if (culoareValida(culoare)) {
+                document.querySelector("p").style.backgroundColor = culoare;
+            } else {
+                alert("Culoare incorecta!");
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<title>L6_D</title>
+</head>
+<body>
+
+<img id="poza" src="Img/pisici.jpg" width="200" height="150">
+<br><br>
+<button onclick="inapoi()">Inapoi</button>
+<button onclick="inainte()">Inainte</button>
+<p id="contor">Imaginea 1 din 4</p>
+
+<script>
+var imagini = ["Img/pisici.jpg", "Img/caini.jpg", "Img/munti.jpg", "Img/mare.jpg"];
+var index = 0;
+
+function actualizeaza() {
+    document.getElementById("poza").src = imagini[index];
+    document.getElementById("contor").innerHTML = "Imaginea " + (index + 1) + " din " + imagini.length;
+}
+
+function inainte() {
+    index = (index + 1) % imagini.length;
+    actualizeaza();
+}
+
+function inapoi() {
+    index = (index - 1 + imagini.length) % imagini.length;
+    actualizeaza();
+}
+</script>
+
+</body>
+</html>

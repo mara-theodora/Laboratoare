@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>L6_B</title>
+</head>
+<body>
+
+    <button onclick="interschimbaText()">Schimbă textele între ele</button>
+
+    <p id="p1" style="color: blue; font-weight: bold; cursor: pointer;" onclick="schimbaTextPrompt('p1')">Acesta este primul paragraf, formatat cu text albastru și îngroșat.</p>
+    <p id="p2" style="color: red; font-style: italic; cursor: pointer;" onclick="schimbaTextPrompt('p2')">Acesta este al doilea paragraf, formatat cu text roșu și cursiv.</p>
+
+    <script>
+        function schimbaTextPrompt(id) {
+            var textNou = prompt("Introduceți noul text pentru acest paragraf:");
+            if (textNou !== null && textNou !== "") {
+                document.getElementById(id).innerHTML = textNou;
+            }
+        }
+
+        function interschimbaText() {
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+            var continutTemporar = p1.innerHTML;
+            
+            p1.innerHTML = p2.innerHTML;
+            p2.innerHTML = continutTemporar;
+        }
+    </script>
+
+</body>
+</html>

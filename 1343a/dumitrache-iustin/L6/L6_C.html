@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1 id="titlu">Titlu ex 4 lab 6</h1>
+        <p id="paragraf">Acesta este un paragraf <br>
+        Paragraful este scris de mine <br>
+        utilizand visual studio code </p>
+
+        <script>
+            var titlu = document.getElementById("titlu");
+            var paragraf = document.getElementById("paragraf");
+
+            titlu.onclick = function(){
+                var culoare = prompt("Introduceti culoarea: ");
+                if(culoare !== null && culoare !== ""){
+                    if(CSS.supports("color",culoare)){
+                        this.style.color = culoare;
+                    }else{
+                        alert("Culoare incorecta");
+                    }
+                }
+            };
+
+            paragraf.onclick = function(){
+                var culoare = prompt("Introduceti culoarea: ");
+                if(culoare !== null && culoare !== ""){
+                    if(CSS.supports("color",culoare)){
+                        this.style.backgroundColor = culoare;
+                    }else{
+                        alert("Culoare incorecta");
+                    }
+                }
+            };
+        </script>
+    </body>
+</html>

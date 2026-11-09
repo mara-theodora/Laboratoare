@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>L6_B</title>
+
+    <script>
+        function editP1() {
+            var textNou = prompt("Scrie noul text pentru primul paragraf:");
+            if (textNou != null) {
+                document.getElementById("paragraf1").innerHTML = textNou;
+            }
+        }
+
+        function editP2() {
+            var textNou = prompt("Scrie noul text pentru al doilea paragraf:");
+            if (textNou != null) {
+                document.getElementById("paragraf2").innerHTML = textNou;
+            }
+        }
+
+        function schimbaIntreEle() {
+            var p1 = document.getElementById("paragraf1");
+            var p2 = document.getElementById("paragraf2");
+
+            var aux = p1.innerHTML;
+            p1.innerHTML = p2.innerHTML;
+            p2.innerHTML = aux;
+        }
+    </script>
+
+</head>
+<body>
+
+    <button onclick="schimbaIntreEle()">Interschimba paragrafele</button>
+
+    <p id="paragraf1" style="color: blue; font-weight: bold;" onclick="editP1()">
+        Paragraf 1
+    </p>
+
+    <p id="paragraf2" style="color: red; font-style: italic;" onclick="editP2()">
+        Paragraf2
+    </p>
+
+</body>
+</html>

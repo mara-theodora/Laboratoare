@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function ChangeColor(id) {
+            var object = document.getElementById(id);
+            var text = prompt("Introdu culoarea:");
+            if (text !== null && text !== "") {
+                if (CSS.supports("color", text))
+                    object.style.color = text;
+            }
+        }
+        function ChangeParagraphColor(id) {
+            var object = document.getElementById(id);
+            var text = prompt("Introdu culoarea paragrafului:");
+            if (text !== null && text !== "") {
+                if (CSS.supports("color", text))
+                    object.style.backgroundColor = text;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 onclick="ChangeColor('p1')">Partea L6_C</h1>
+    <p id="p1" onclick="ChangeParagraphColor('p1')">Linia1<br />Linia2<br />Linia3</p>
+</body>
+</html>

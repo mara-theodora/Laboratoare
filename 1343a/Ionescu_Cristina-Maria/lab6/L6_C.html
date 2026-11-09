@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Culori cerute prin prompt</title>
+</head>
+<body>
+    <h1 id="titlu">Programarea Aplicațiilor Web</h1>
+    <p id="par">Prima item<br>Al doilea item<br>Al treilea item</p>
+
+    <script>
+    document.getElementById("titlu").onclick = function () {
+        var c = prompt("Introduceți culoarea textului:", "red");
+        if (c === null) {
+            return;
+        }
+        if (CSS.supports("color", c)) {
+            this.style.color = c;
+        } else {
+            alert("Culoare incorectă: " + c);
+        }
+    };
+
+    document.getElementById("par").onclick = function () {
+        var c = prompt("Introduceți culoarea de fundal:", "yellow");
+        if (c === null) {
+            return;
+        }
+        if (CSS.supports("color", c)) {
+            this.style.backgroundColor = c;
+        } else {
+            alert("Culoare incorectă: " + c);
+        }
+    };
+    </script>
+</body>
+</html>

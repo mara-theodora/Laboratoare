@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Galerie Imagini</title>
+</head>
+<body>
+    <div>
+        <img id="galerie" src="Img/pisici.jpg" width="160" height="120" alt="Galerie">
+    </div>
+    <p id="info">Imaginea 1 din 4</p>
+    <button id="inapoi">Înapoi</button>
+    <button id="inainte">Înainte</button>
+
+    <script>
+    var imagini = ["Img/pisici.jpg", "Img/caini.jpg", "Img/munti.jpg", "Img/mare.jpg"];
+    var indexCurent = 0;
+
+    var imgElement = document.getElementById("galerie");
+    var infoElement = document.getElementById("info");
+
+    function actualizeazaGalerie() {
+        imgElement.src = imagini[indexCurent];
+        infoElement.innerHTML = "Imaginea " + (indexCurent + 1) + " din " + imagini.length;
+    }
+
+    document.getElementById("inainte").onclick = function() {
+        indexCurent = (indexCurent + 1) % imagini.length;
+        actualizeazaGalerie();
+    };
+
+    document.getElementById("inapoi").onclick = function() {
+        indexCurent = (indexCurent - 1 + imagini.length) % imagini.length;
+        actualizeazaGalerie();
+    };
+    </script>
+</body>
+</html>

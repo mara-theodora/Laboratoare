@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>L6_C</title>
+</head>
+<body>
+
+    <h1 id="titlu" style="cursor: pointer;" onclick="schimbaCuloareText()">Titlul paginii L6_C</h1>
+    
+    <p id="paragraf" style="cursor: pointer;" onclick="schimbaCuloareFundal()">
+        Aceasta este prima linie din paragraf.<br>
+        Aceasta este a doua linie din paragraf.<br>
+        Aceasta este a treia linie din paragraf.
+    </p>
+
+    <script>
+        function schimbaCuloareText() {
+            var culoare = prompt("Introduceți o culoare pentru textul titlului:");
+            if (culoare !== null && culoare !== "") {
+                if (CSS.supports("color", culoare)) {
+                    document.getElementById("titlu").style.color = culoare;
+                } else {
+                    alert("Culoare incorectă!");
+                }
+            }
+        }
+
+        function schimbaCuloareFundal() {
+            var culoare = prompt("Introduceți o culoare pentru fundalul paragrafului:");
+            if (culoare !== null && culoare !== "") {
+                if (CSS.supports("color", culoare)) {
+                    document.getElementById("paragraf").style.backgroundColor = culoare;
+                } else {
+                    alert("Culoare incorectă!");
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercițiul 4 - Lab 6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        #titlu {
+            color: black;
+            cursor: pointer;
+        }
+        #paragraf {
+            background-color: black;
+            color: white; 
+            cursor: pointer;
+            line-height: 1.6;
+            padding: 10px;
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="titlu">Acesta este un titlu interactiv</h1>
+
+    <p id="paragraf">
+        Prima linie de text din paragraf.<br>
+        A doua linie de text din paragraf.<br>
+        A treia linie de text din paragraf.
+    </p>
+
+    <script>
+        function esteCuloareValida(culoare) {
+            var elementTest = document.createElement("div");
+            elementTest.style.color = culoare;
+            return elementTest.style.color !== "";
+        }
+
+        document.getElementById("titlu").onclick = function () {
+            var culoare = prompt("Introduceți o culoare nouă pentru titlu:");
+            
+            if (culoare !== null) {
+                if (esteCuloareValida(culoare)) {
+                    this.style.color = culoare; 
+                } else {
+                    alert("Culoare incorectă!"); 
+                }
+            }
+        };
+        document.getElementById("paragraf").onclick = function () {
+            var culoare = prompt("Introduceți o culoare nouă de fundal pentru paragraf (ex: pink, blue):", "pink");
+            
+            if (culoare !== null) {
+                if (esteCuloareValida(culoare)) {
+                    this.style.backgroundColor = culoare;
+                } else {
+                    alert("Culoare incorectă! Nu s-a schimbat nimic.");
+                }
+            }
+        };
+    </script>
+
+</body>
+</html>

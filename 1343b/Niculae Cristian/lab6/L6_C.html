@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercițiul 4 - L6_C</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { cursor: pointer; }
+        p { 
+            cursor: pointer; 
+            line-height: 1.6; 
+            width: 300px; 
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="titlu">Titlu Principal de Test</h1>
+    <p id="paragraf">
+        Aceasta este prima linie a paragrafului.<br>
+        Aceasta este a doua linie a paragrafului.<br>
+        Aceasta este a treia linie a paragrafului.
+    </p>
+
+    <script>
+        // Schimbare culoare text h1
+        document.getElementById("titlu").addEventListener("click", function() {
+            var culoare = prompt("Introduceți culoarea pentru titlu (ex: red, #ff0000, rgb(255,0,0)):");
+            if (culoare !== null && culoare !== "") {
+                if (CSS.supports("color", culoare)) {
+                    this.style.color = culoare;
+                } else {
+                    alert("Culoarea '" + culoare + "' este incorectă!");
+                }
+            }
+        });
+
+        // Schimbare culoare de fundal paragraf
+        document.getElementById("paragraf").addEventListener("click", function() {
+            var culoare = prompt("Introduceți culoarea de fundal pentru paragraf:");
+            if (culoare !== null && culoare !== "") {
+                if (CSS.supports("color", culoare)) {
+                    this.style.backgroundColor = culoare;
+                } else {
+                    alert("Culoarea '" + culoare + "' este incorectă!");
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

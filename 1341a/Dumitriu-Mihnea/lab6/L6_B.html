@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercițiul 3</title>
+</head>
+<body>
+    <button id="btnSchimba">Schimbă textele</button>
+    <p id="paragraf1" style="font-weight: bold; color: darkred;">Acesta este primul paragraf.</p>
+    <p id="paragraf2" style="font-style: italic; color: darkblue;">Acesta este al doilea paragraf.</p>
+
+    <script>
+        let p1 = document.getElementById("paragraf1");
+        let p2 = document.getElementById("paragraf2");
+        let btn = document.getElementById("btnSchimba");
+
+        p1.onclick = function() {
+            let textNou = prompt("Introduceți textul nou:", p1.innerHTML);
+            if (textNou !== null) p1.innerHTML = textNou;
+        };
+        p2.onclick = function() {
+            let textNou = prompt("Introduceți textul nou:", p2.innerHTML);
+            if (textNou !== null) p2.innerHTML = textNou;
+        };
+
+        btn.onclick = function() {
+            let temp = p1.innerHTML;
+            p1.innerHTML = p2.innerHTML;
+            p2.innerHTML = temp;
+        };
+    </script>
+</body>
+</html>

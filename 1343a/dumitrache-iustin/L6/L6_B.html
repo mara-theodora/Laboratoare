@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercitiul 3</title>
+    <style>
+        #p1 {
+            color: blue;
+            font-size: 20px;
+        }
+        #p2 {
+            color: green;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btn">Schimba</button>
+    <p id="p1">Primul paragraf</p>
+    <p id="p2">Al doilea paragraf</p>
+
+    <script>
+        var paragraf1 = document.getElementById("p1");
+        var paragraf2 = document.getElementById("p2");
+        var buton = document.getElementById("btn");
+
+        paragraf1.onclick = function () {
+            var text = prompt("Introducei noul text al paragrafului:", this.innerHTML);
+            if (text !== null && text !== "") {
+                this.innerHTML = text;
+            }
+        };
+
+        paragraf2.onclick = function () {
+            var text = prompt("Introduceti noul text al paragrafului:", this.innerHTML);
+            if (text !== null && text !== "") {
+                this.innerHTML = text;
+            }
+        };
+
+        buton.onclick = function () {
+            var auxiliar = paragraf1.innerHTML;
+            paragraf1.innerHTML = paragraf2.innerHTML;
+            paragraf2.innerHTML = auxiliar;
+        };
+    </script>
+
+</body>
+</html>

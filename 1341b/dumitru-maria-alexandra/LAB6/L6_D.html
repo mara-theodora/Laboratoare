@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>L6_D - Galerie</title>
+</head>
+<body>
+
+    <div>
+        <img id="imagine-galerie" src="Img/pisici.jpg" alt="Galerie Foto" width="300" height="200">
+    </div>
+    
+    <p id="text-indicator">Imaginea 1 din 4</p>
+    
+    <button onclick="imagineInapoi()">Înapoi</button>
+    <button onclick="imagineInainte()">Înainte</button>
+
+    <script>
+        var imagini = ["Img/pisici.jpg", "Img/munti.jpg", "Img/caini.jpg", "Img/mare.jpg"];
+        var pozitieCurenta = 0; 
+        var totalImagini = imagini.length;
+
+        function actualizareAfisaj() {
+            document.getElementById("imagine-galerie").src = imagini[pozitieCurenta];
+            document.getElementById("text-indicator").innerHTML = "Imaginea " + (pozitieCurenta + 1) + " din " + totalImagini;
+        }
+
+        function imagineInainte() {
+            pozitieCurenta = (pozitieCurenta + 1) % totalImagini;
+            actualizareAfisaj();
+        }
+
+        function imagineInapoi() {
+            pozitieCurenta = (pozitieCurenta - 1 + totalImagini) % totalImagini;
+            actualizareAfisaj();
+        }
+    </script>
+
+</body>
+</html>

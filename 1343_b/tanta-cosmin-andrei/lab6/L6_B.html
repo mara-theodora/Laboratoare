@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function functieButon1() {
+    var x = document.getElementById("changeable_text");
+    var y = document.getElementById("swap");
+    var tempHTML = x.innerHTML;
+    x.innerHTML = y.innerHTML; y.innerHTML = tempHTML;
+
+}
+function paragraf(){
+    var x = document.getElementById("changeable_text");
+    changeable = prompt("Salut, spune ce vrei sa scrii aici!")    
+    x.innerHTML = changeable;
+}
+</script>
+
+<button id="butt" type="button" onclick="functieButon1()">Click Me!</button>
+
+<p id="changeable_text" style="font-size: 25px; color: floralwhite; background-color: Indigo;" type="button" onclick="paragraf()">Salutare,  oameni buni! Daca apesi pe acest paragraf, poti schimba textul</p>
+
+
+<p id="swap" style="font-size: 25px; color: floralwhite; background-color: SlateBlue;">Acest text se schimba prin JavaScript</p>
+
+
+
+</body>
+</html>

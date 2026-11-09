@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS_B1</title>
+<style>
+    body {
+        background-color: #ffffcc;
+    }
+    
+    .center {
+        text-align: center;
+        color: white;
+    }
+    
+    h1 {
+        background-color: #00cc66;
+        color: orange;
+    }
+    
+    /* Stil global pentru tabele, anteturi și celule */
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    
+    /* Clasa centre aplicată uniform pe tabele sau celule */
+    .centre {
+        border: 5px solid blue;
+        padding: 15px;
+    }
+    
+    /* Fundal container primul tabel */
+    #s1 {
+        background-color: #00cc66;
+    }
+    
+    /* Schimbare fundal primul tabel în albastru */
+    #s1 table {
+        background-color: blue;
+    }
+    
+    /* Fundal container al doilea tabel */
+    #s2 {
+        background-color: yellow;
+    }
+    
+    div {
+        color: blue;
+    }
+</style>
+</head>
+<body>
+
+<h1 class="center">Tabele formatate</h1>
+
+<!-- Primul container cu primul tabel (fundal albastru setat din CSS) -->
+<div id="s1">
+    <table style="width:100%" class="center">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+    <br>
+</div> 
+
+<!-- Al doilea container cu al doilea tabel (celule uniformizate) -->
+<div id="s2" style="width:50%">
+    <br>
+    <table style="width:100%">
+        <tr>
+            <th class="centre">Firstname</th>
+            <th class="centre">Lastname</th>
+            <th class="centre">Age</th>
+        </tr>
+        <tr>
+            <td class="centre">Jill</td>
+            <td class="centre">Smith</td>
+            <td class="centre">50</td>
+        </tr>
+        <tr>
+            <td class="centre">Eve</td>
+            <td class="centre">Jackson</td>
+            <td class="centre">94</td>
+        </tr>
+    </table>
+</div> 
+
+</body>
+</html>

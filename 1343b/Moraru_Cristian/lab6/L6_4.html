@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modificare folosind clase</title>
+</head>
+
+<body>
+
+<h3>Utilizati Javascript si HTML DOM pentru a inlocui imaginile de mai jos asa cum este indicat in textele de deasupra lor</h3>
+
+Pisici
+<hr />
+
+<img class="animal" src="pesti.jpg" alt="Niste pesti" width="160" height="120">
+
+<br /><br />
+
+Munti
+<hr />
+
+<img class="peisaj" src="desert.jpg" alt="O jungla" width="160" height="120">
+
+<br /><br />
+
+Caini
+<hr />
+
+<img class="animal" src="egrete.jpg" alt="Niste egrete" width="160" height="120">
+
+<br /><br />
+
+Mare
+<hr />
+
+<img class="peisaj" src="jungla.jpg" alt="Un desert" width="160" height="120">
+
+<script>
+
+    var a = document.getElementsByClassName("animal");
+
+    a[0].src = "Img/pisici.jpg";
+    a[0].alt = "Pisici";
+
+    a[1].src = "Img/caini.jpg";
+    a[1].alt = "Caini";
+
+    var p = document.getElementsByClassName("peisaj");
+
+    p[0].src = "Img/munti.jpg";
+    p[0].alt = "Munti";
+
+    p[1].src = "Img/mare.jpg";
+    p[1].alt = "Mare";
+
+    document.title = "Imagini modificate";
+
+    var par = document.getElementsByTagName("p");
+
+    par[0].style.color = "red";
+    par[par.length - 1].style.color = "blue";
+
+</script>
+
+</body>
+</html>

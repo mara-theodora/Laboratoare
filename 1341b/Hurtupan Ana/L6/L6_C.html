@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercitiul 4</title>
+</head>
+<body>
+    <h1 id="titlu">Acesta este un titlu scurt</h1>
+    
+    <p id="paragraf">
+        Aceasta este prima linie a paragrafului.<br>
+        Aceasta este a doua linie a paragrafului.<br>
+        Aceasta este a treia linie a paragrafului.
+    </p>
+
+    <script>
+        var titlu = document.getElementById("titlu");
+        var paragraf = document.getElementById("paragraf");
+
+        titlu.onclick = function() {
+            var culoareText = prompt("Introduceti o culoare valida pentru textul titlului (ex: red, #ff0000, rgb(255,0,0)):");
+            
+            if (culoareText !== null && culoareText !== "") {
+                if (CSS.supports("color", culoareText)) {
+                    titlu.style.color = culoareText;
+                } else {
+                    alert("Culoare incorecta! Nu s-a modificat nimic.");
+                }
+            }
+        };
+
+        paragraf.onclick = function() {
+            var culoareFundal = prompt("Introduceti o culoare valida pentru fundalul paragrafului:");
+            
+            if (culoareFundal !== null && culoareFundal !== "") {
+                if (CSS.supports("color", culoareFundal)) {
+                    paragraf.style.backgroundColor = culoareFundal;
+                } else {
+                    alert("Culoare incorecta! Nu s-a modificat nimic.");
+                }
+            }
+        };
+    </script>
+</body>
+</html>

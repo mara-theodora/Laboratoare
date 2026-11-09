@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Document creat cu JavaScript</title>
+</head>
+<body>
+    <script>
+	let h = document.createElement("h1");
+
+    h.innerHTML = "Header mare";
+    h.style.color = "blue";
+    h.style.fontSize = "48px";
+
+    document.body.appendChild(h);
+
+
+    let p = document.createElement("p");
+
+    p.innerHTML = "Paragraf <br> cu trei <br> linii.";
+    p.style.backgroundColor = "yellow";
+    p.style.fontSize = "24px";
+
+    document.body.appendChild(p);
+	</script>
+</body>
+</html>

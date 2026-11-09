@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Modificari paragrafe</title>
+<script>
+    // 2. Definim funcția în <head> care va fi apelată la click
+    function schimbaParagrafele() {
+        // Modificăm textele conform cerinței
+        document.getElementById('p1').innerText = "Acesta este paragraful 1";
+        document.getElementById('p2').innerText = "Acesta este paragraful 2";
+        document.getElementById('p3').innerText = "Acesta este paragraful 3";
+
+        // Modificăm culorile textului și ale fundalului pentru fiecare paragraf
+        document.getElementById('p1').style.backgroundColor = "lightblue";
+        document.getElementById('p1').style.color = "darkblue";
+
+        document.getElementById('p2').style.backgroundColor = "lightgreen";
+        document.getElementById('p2').style.color = "darkgreen";
+
+        document.getElementById('p3').style.backgroundColor = "lightyellow";
+        document.getElementById('p3').style.color = "darkorange";
+    }
+</script>
+</head>
+<body>
+
+<h1>Modificari paragrafe la click pe buton</h1>
+
+<!-- 1. Am adăugat id-uri pentru fiecare paragraf -->
+<p id="p1">Acesta este un paragraf</p>
+
+<p id="p2">Si acesta este un paragraf</p>
+
+<p id="p3">Acesta este inca un paragraf</p>
+
+<!-- 3. Am adăugat onclick pentru a apela funcția creată mai sus -->
+<button type="button" onclick="schimbaParagrafele()">Apasa-ma!</button>
+
+</body>
+</html>

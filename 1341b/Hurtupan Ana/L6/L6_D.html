@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercitiul bonus - Galerie Foto</title>
+    <style>
+        .galerie-container {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 30px;
+        }
+        #imagineCurenta {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+            border: 2px solid #333;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="galerie-container">
+        <h3 id="textContor">Imaginea 1 din 4</h3>
+        
+        <img id="imagineCurenta" src="Img/pisici.jpg" alt="Imagine Galerie"><br>
+        
+        <button id="btnInapoi">Inapoi</button>
+        <button id="btnInainte">Inainte</button>
+    </div>
+
+    <script>
+        var imagini = ["Img/pisici.jpg", "Img/caini.jpg", "Img/munti.jpg", "Img/mare.jpg"];
+        var pozitieCurenta = 0; 
+        var totalImagini = imagini.length;
+
+        var imgElement = document.getElementById("imagineCurenta");
+        var textContor = document.getElementById("textContor");
+        var btnInapoi = document.getElementById("btnInapoi");
+        var btnInainte = document.getElementById("btnInainte");
+
+        function actualizeazaGalerie() {
+            imgElement.src = imagini[pozitieCurenta];
+            textContor.innerHTML = "Imaginea " + (pozitieCurenta + 1) + " din " + totalImagini;
+        }
+
+        btnInainte.onclick = function() {
+            pozitieCurenta = (pozitieCurenta + 1) % totalImagini;
+            actualizeazaGalerie();
+        };
+
+        btnInapoi.onclick = function() {
+            pozitieCurenta = (pozitieCurenta - 1 + totalImagini) % totalImagini;
+            actualizeazaGalerie();
+        };
+    </script>
+</body>
+</html>

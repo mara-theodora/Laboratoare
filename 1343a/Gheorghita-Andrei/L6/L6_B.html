@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        #p1 {
+            color: blue;
+            background-color: antiquewhite;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+
+        #p2 {
+            color: red;
+            background-color: lightgray;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <div> <button type="button" onclick="interschimbareText()">Click me</button> </div> <!-- Butonul va interschimba textul celor două paragrafe -->
+    <div>
+        <p id="p1">Acest text reprezintă primul paragraf</p>
+
+        <script>
+            var text = prompt("Introduceți noul text al paragrafului:", "Text initial");
+            if (text !== null && text !== "") {
+            document.getElementById("p1").innerHTML = text;
+            }
+        </script>
+
+        <p id="p2">Un alt paragraf</p>
+        <script>
+            function interschimbareText() {
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+            var temp = p1.innerHTML;
+            p1.innerHTML = p2.innerHTML;
+            p2.innerHTML = temp;
+            }
+        </script>
+    </div>
+</body>
+</html>

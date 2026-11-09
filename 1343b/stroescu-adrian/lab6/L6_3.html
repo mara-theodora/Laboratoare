@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Modificare folosind clase</title>
+</head>
+<body>
+
+    <h1>Utilizati Javascript si HTML DOM (metoda getElementsByClassName() ) pentru a modifica culorile asa cum se indica mai jos</h1>
+
+    <div class="yb">
+        <br />
+        <p class="by">Text <br /> albastru <br /> pe fond <br />galben</p>
+        <br />
+        <p class="yb">Text <br /> galben <br /> pe fond <br />albastru</p>
+        <br />
+    </div>
+
+    <div class="by">
+        <br />
+        <p class="by">Alt text <br /> albastru <br /> pe fond <br />galben</p>
+        <br />
+        <p class="yb">Alt text <br /> galben <br /> pe fond <br />albastru</p>
+        <br />
+    </div>
+
+    <script>
+        var elemBY = document.getElementsByClassName("by");
+        for (var i = 0; i < elemBY.length; i++) {
+            elemBY[i].style.color = "blue";
+            elemBY[i].style.backgroundColor = "yellow";
+        }
+        var elemYB = document.getElementsByClassName("yb");
+        for (var j = 0; j < elemYB.length; j++) {
+            elemYB[j].style.color = "yellow";
+            elemYB[j].style.backgroundColor = "blue";
+        }
+    </script>
+
+</body>
+</html>

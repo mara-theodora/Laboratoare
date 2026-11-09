@@ -1,0 +1,43 @@
+header {background-color:GreenYellow;text-align:right;font-size:14px}
+#key {color:blue;background-color:yellow;text-align:center; font-family:verdana; font-size:200%}
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14pt;
+  color: blue;
+}
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 12pt;
+  color: red;
+}
+h3 {
+  font-family: Calibri;
+  font-size: 12pt;
+  color: blue;
+}
+.header {
+  font-family: Arial;
+  font-size: 12pt;
+  color: red;
+}
+.p1 {
+  font-family: 'Times New Roman';
+  font-size: 12pt;
+  color: green;
+}
+.p2 {
+  font-style: italic;
+}
+.p3 {
+  font-variant: small-caps;
+  color: blue;
+}
+.h1{
+  background-color: blue;
+  font-family: Arial;
+  color: white;
+}
+footer {
+  background-color: black;
+  color: white;
+}

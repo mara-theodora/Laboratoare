@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>L6_3</title>
+</head>
+<body>
+
+    <p>Utilizati Javascript si HTML DOM (metoda getElementsByClassName() ) pentru a modifica culorile asa cum se indica mai jos</p>
+
+    <p class="by">Text albastru pe fond galben</p>
+    <p class="yb">Text galben pe fond albastru</p>
+    <p class="by">Alt text albastru pe fond galben</p>
+    <p class="yb">Alt text galben pe fond albastru</p>
+
+    <script>
+        // Elementele cu clasa "by" -> Text albastru pe fond galben
+        var deTipBy = document.getElementsByClassName("by");
+        for (var i = 0; i < deTipBy.length; i++) {
+            deTipBy[i].style.color = "blue";
+            deTipBy[i].style.backgroundColor = "yellow";
+        }
+
+        // Elementele cu clasa "yb" -> Text galben pe fond albastru
+        var deTipYb = document.getElementsByClassName("yb");
+        for (var j = 0; j < deTipYb.length; j++) {
+            deTipYb[j].style.color = "yellow";
+            deTipYb[j].style.backgroundColor = "blue";
+        }
+    </script>
+
+    <p><a href="index.html">Înapoi la meniu</a></p>
+</body>
+</html>

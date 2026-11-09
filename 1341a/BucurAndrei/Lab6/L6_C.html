@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>L6_C</title>
+
+    <script>
+        function schimbaCuloareTitlu() {
+            var culoare = prompt("Introdu o culoare (ex: #ff0000 , blue , green ):");
+            if (culoare != null) {
+                if (CSS.supports("color", culoare)) {
+                    document.getElementById("titlu").style.color = culoare;
+                } else {
+                    alert("Culoarea '" + culoare + "' nu este valida!");
+                }
+            }
+        }
+
+        function schimbaFundalParagraf() {
+            var culoare = prompt("Introdu o culoare valida pentru fundal (ex: #00ff00 , red , green ):");
+            
+            if (culoare != null) {
+                if (CSS.supports("color", culoare)) {
+                    document.getElementById("paragraf").style.backgroundColor = culoare;
+                } else {
+                    alert("Culoarea '" + culoare + "' nu este valida!");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="titlu" onclick="schimbaCuloareTitlu()">
+        Titlu de câteva cuvinte
+    </h1>
+
+    <p id="paragraf" onclick="schimbaFundalParagraf()">
+        Prima linie de text din paragraf.<br>
+        A doua linie de text.<br>
+        A treia linie, da click pe mine.
+    </p>
+
+</body>
+</html>

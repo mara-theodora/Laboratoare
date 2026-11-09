@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Modificari paragrafe</title>
+
+<script>
+function schimba() {
+    var p1 = document.getElementById("par1");
+    p1.innerHTML = "Acesta este paragraful 1";
+    p1.style.color = "white";
+    p1.style.backgroundColor = "green";
+
+    var p2 = document.getElementById("par2");
+    p2.innerHTML = "Acesta este paragraful 2";
+    p2.style.color = "yellow";
+    p2.style.backgroundColor = "purple";
+
+    var p3 = document.getElementById("par3");
+    p3.innerHTML = "Acesta este paragraful 3";
+    p3.style.color = "black";
+    p3.style.backgroundColor = "orange";
+}
+</script>
+
+</head>
+<body>
+
+<h1>Modificari paragrafe la click pe buton</h1>
+
+<p id="par1">Acesta este un paragraf</p>
+
+<p id="par2">Si acesta este un paragraf</p>
+
+<p id="par3">Acesta este inca un paragraf</p>
+
+<button type="button" onclick="schimba()">Click</button>
+
+</body>
+</html>

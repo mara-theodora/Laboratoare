@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercițiul 3</title>
+    <style>
+        #p1 {
+            color: lightskyblue;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+        }
+        #p2 {
+            color: rgb(251, 161, 241);
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <button id="btnSchimba">Schimba textele intre ele</button>
+    
+    <p id="p1">Primul paragraf este scris cu albastru deschis</p>
+    <p id="p2">Al doilea paragraf este scris cu roz deschis</p>
+
+    <script>
+        var p1 = document.getElementById("p1");
+        var p2 = document.getElementById("p2");
+        var buton = document.getElementById("btnSchimba");
+
+        p1.onclick = function() {
+            var textNou = prompt("Introduceti textul nou pentru primul paragraf:", p1.innerHTML);
+            if (textNou !== null && textNou !== "") {
+                p1.innerHTML = textNou;
+            }
+        };
+
+        p2.onclick = function() {
+            var textNou = prompt("Introduceti textul nou pentru al doilea paragraf:", p2.innerHTML);
+            if (textNou !== null && textNou !== "") {
+                p2.innerHTML = textNou;
+            }
+        };
+
+        buton.onclick = function() {
+            var textTemporar = p1.innerHTML;
+            p1.innerHTML = p2.innerHTML;
+            p2.innerHTML = textTemporar;
+        };
+    </script>
+</body>
+</html>

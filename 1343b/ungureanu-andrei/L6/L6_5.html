@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Modificare folosind clase si evenimente</title>
+</head>
+<body>
+
+<h3>Utilizati Javascript si HTML DOM pentru a inlocui imaginile de mai jos</h3>
+
+La click vor aparea pesti
+<img class="animal" src="Img/pisici.jpg" alt="Pisici" width="160" height="120">
+
+La mouseover apare jungla
+<img class="peisaj" src="Img/munti.jpg" alt="Munti" width="160" height="120">
+
+La click vor aparea egrete
+<img class="animal" src="Img/caini.jpg" alt="Caini" width="160" height="120">
+
+La mouseover apare desertul
+<img class="peisaj" src="Img/mare.jpg" alt="Mare" width="160" height="120">
+
+<script>
+
+let animale = document.getElementsByClassName("animal");
+let peisaje = document.getElementsByClassName("peisaj");
+
+animale[0].addEventListener("click", function() {
+    animale[0].src = "Img/Pesti.jpg";
+});
+
+peisaje[0].addEventListener("mouseover", function() {
+    peisaje[0].src = "Img/Jungla.jpg";
+});
+
+animale[1].addEventListener("click", function() {
+    animale[1].src = "Img/Egrete.jpg";
+});
+
+peisaje[1].addEventListener("mouseout", function() {
+    peisaje[1].src = "Img/Desert.jpg";
+});
+
+</script>
+
+</body>
+</html>

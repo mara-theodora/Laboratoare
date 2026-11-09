@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercițiul 1 - Blocurile interschimbate</title>
+    <style>
+        .center {                    /* fostul bloc 3 */
+            font-variant: small-caps;
+            color: blue; 
+        }
+        p, .center {                 /* blocul 2 (rămâne la mijloc) */
+            text-align: center;
+            color: red; 
+        }
+        p {                          /* fostul bloc 1 */
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="center">Heading roșu/albastru</h1>
+    <p class="center">Paragraf cu text de probă care testează specificitatea CSS.</p>
+</body>
+</html>

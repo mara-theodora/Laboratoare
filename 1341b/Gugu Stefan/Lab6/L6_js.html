@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Document creat cu JavaScript</title>
+</head>
+<body>
+    <script>
+        const heading = document.createElement("h1");
+        heading.textContent = "Header mare";
+        heading.style.color = "purple";
+
+        const paragraph = document.createElement("p");
+        paragraph.innerHTML = "Paragraf <br> cu trei <br> linii.";
+        paragraph.style.backgroundColor = "darkblue";
+        
+        document.body.append(heading, paragraph);
+    </script>
+</body>
+</html>

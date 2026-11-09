@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercițiul 4 - Lab 6</title>
+    <style>
+        h1, p {
+            cursor: pointer;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        h1 {
+            color: #333;
+            border: 2px dashed #ccc;
+        }
+        p {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="titlu">Titlu principal al paginii</h1>
+    
+    <p id="paragraf">
+        Aceasta este prima linie de text din paragraf.<br>
+        Aceasta este a doua linie a paragrafului.<br>
+        Aceasta este a treia linie de text.
+    </p>
+
+    <script>
+        var titlu = document.getElementById("titlu");
+        var paragraf = document.getElementById("paragraf");
+
+        titlu.onclick = function() {
+            var culoare = prompt("Introduceți culoarea pentru titlu (ex: red, #ff0000, blue):");
+            if (culoare !== null && culoare !== "") {
+                if (CSS.supports("color", culoare)) {
+                    titlu.style.color = culoare;
+                } else {
+                    alert("Culoare incorectă: \"" + culoare + "\" nu este o culoare CSS validă!");
+                }
+            }
+        };
+
+        paragraf.onclick = function() {
+            var culoare = prompt("Introduceți culoarea de fundal pentru paragraf (ex: yellow, #ffff00, lightgreen):");
+            if (culoare !== null && culoare !== "") {
+                if (CSS.supports("color", culoare)) {
+                    paragraf.style.backgroundColor = culoare;
+                } else {
+                    alert("Culoare incorectă: \"" + culoare + "\" nu este o culoare CSS validă!");
+                }
+            }
+        };
+    </script>
+
+</body>
+</html>

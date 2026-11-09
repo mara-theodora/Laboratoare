@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h1>Modificare paragrafe</h1>
+
+<button onclick=schimbButon()>Schimb!!!!</button>
+
+<p id="par1" onclick=myfn1()>text de modificat 1</p>
+
+<p id="par2" onclick=myfn2()>text de modificat 2</p> 
+
+<script>
+    function myfn1(){
+        var text = prompt("Introduceți noul text al paragrafului 1:","Text default");
+        if (text !== null && text !== "") {
+            document.getElementById("par1").innerHTML = text;
+        }
+    }
+    
+    function myfn2(){
+        var text = prompt("Introduceți noul text al paragrafului 2:","Text default");
+        if (text !== null && text !== "") {
+            document.getElementById("par2").innerHTML = text;     
+        }
+    }  
+    function schimbButon(){
+        var aux=document.getElementById("par1").innerHTML;
+        document.getElementById("par1").innerHTML = document.getElementById("par2").innerHTML;
+        document.getElementById("par2").innerHTML = aux;
+    }  
+    </script>
+</body>
+</html> 

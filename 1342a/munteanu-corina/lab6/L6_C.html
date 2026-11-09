@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercitiul 4 - Culori</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 30px;
+        }
+
+        h1 {
+            color: blue;
+            cursor: pointer;
+        }
+
+        p {
+            background-color: #f399dd;
+            padding: 20px;
+            cursor: pointer;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="titlu">JavaScript si modificarea culorilor</h1>
+
+    <p id="paragraf">
+        Acesta este primul rand de text.<br>
+        Acesta este al doilea rand de text.<br>
+        Acesta este al treilea rand de text.
+    </p>
+
+    <script>
+        var titlu = document.getElementById("titlu");
+        var paragraf = document.getElementById("paragraf");
+
+        titlu.onclick = function () {
+            var c = prompt("Introduceti culoarea textului titlului:");
+
+            if (c !== null && c !== "") {
+                if (CSS.supports("color", c)) {
+                    titlu.style.color = c;
+                } else {
+                    alert("Culoarea introdusa nu este corecta!");
+                }
+            }
+        };
+
+        paragraf.onclick = function () {
+            var c = prompt("Introduceti culoarea de fundal a paragrafului:");
+
+            if (c !== null && c !== "") {
+                if (CSS.supports("color", c)) {
+                    paragraf.style.backgroundColor = c;
+                } else {
+                    alert("Culoarea introdusa nu este corecta!");
+                }
+            }
+        };
+    </script>
+
+</body>
+</html>

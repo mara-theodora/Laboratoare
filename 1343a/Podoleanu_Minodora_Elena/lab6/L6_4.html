@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Modificare folosind clase
+</title>
+</head>
+<body>
+<h3> Utilizati Javascript si HTML DOM pentru a inlocui imaginile de mai jos asa cum este indicat in textele de deasupra lor</h3>
+Pisici
+<hr />
+<img class="animal" src="Img/Pesti.jpg" alt="Niste pesti" width="160" height="120">
+<br /> <br />
+Munti
+<hr />
+<img class="peisaj" src="Img/desert.jpg" alt="O jungla" width="160" height="120">
+<br /> <br />
+Caini
+<hr />
+<img class="animal" src="Img/egrete.jpg" alt="Niste egrete" width="160" height="120">
+<br /> <br />
+Mare
+<hr />
+<img class="peisaj" src="Img/jungla.jpg" alt="Un desert" width="160" height="120">
+
+<script>
+window.addEventListener("DOMContentLoaded", function() {
+    let animale = document.getElementsByClassName("animal");
+    let peisaje = document.getElementsByClassName("peisaj");
+
+    // Prima imagine animal -> Pisici
+    if (animale[0]) {
+        animale[0].src = "Img/pisici.jpg";
+        animale[0].alt = "Pisici";
+    }
+
+    // A doua imagine animal -> Caini
+    if (animale[1]) {
+        animale[1].src = "Img/caini.jpg";
+        animale[1].alt = "Caini";
+    }
+
+    // Prima imagine peisaj -> Munti
+    if (peisaje[0]) {
+        peisaje[0].src = "Img/munti.jpg";
+        peisaje[0].alt = "Munti";
+    }
+
+    // A doua imagine peisaj -> Mare
+    if (peisaje[1]) {
+        peisaje[1].src = "Img/mare.jpg";
+        peisaje[1].alt = "Mare";
+    }
+});
+</script>
+
+</body>
+</html>

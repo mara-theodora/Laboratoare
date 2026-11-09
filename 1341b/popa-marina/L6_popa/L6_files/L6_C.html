@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <title>L6_C</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      h1 {
+        cursor: pointer;
+        padding: 10px;
+        border: 2px dashed #007acc;
+        background-color: #f0f8ff;
+        user-select: none;
+      }
+      p {
+        cursor: pointer;
+        padding: 15px;
+        border: 2px dashed #28a745;
+        background-color: #f6fff6;
+        line-height: 1.8;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="titlu">
+      Titlu de test (apasă aici pentru a schimba culoarea textului)
+    </h1>
+
+    <p id="paragraf">
+      Prima linie a paragrafului.<br />
+      A doua linie cu text explicativ.<br />
+      A treia linie (apasă aici pentru a schimba fundalul).
+    </p>
+
+    <script>
+      var titlu = document.getElementById("titlu");
+      var paragraf = document.getElementById("paragraf");
+
+      titlu.onclick = function () {
+        var col = prompt(
+          "Introduceți culoarea pentru textul titlului (ex: red, blue, #ff0000):"
+        );
+        if (col !== null && col.trim() !== "") {
+          col = col.trim();
+          // Verificare conform laboratorului cu CSS.supports
+          if (CSS.supports("color", col)) {
+            titlu.style.color = col;
+          } else {
+            alert("Culoare incorectă: " + col);
+          }
+        }
+      };
+
+      paragraf.onclick = function () {
+        var col = prompt(
+          "Introduceți culoarea de fundal pentru paragraf (ex: yellow, orange, #ffffcc):"
+        );
+        if (col !== null && col.trim() !== "") {
+          col = col.trim();
+          // Verificare conform laboratorului cu CSS.supports
+          if (CSS.supports("color", col)) {
+            paragraf.style.backgroundColor = col;
+          } else {
+            alert("Culoare incorectă: " + col);
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

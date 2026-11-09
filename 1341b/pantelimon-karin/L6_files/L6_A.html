@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercițiul 1 - Lab 6</title>
+</head>
+<body>
+
+    <p id="paragraf">Text initial</p>
+    <script>
+
+        var textNou = prompt("Introduceți textul nou:", "Text implicit");
+
+        if (textNou !== null) {
+            document.getElementById("paragraf").innerText = textNou;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Titlu Vechi</title>
+</head>
+<body>
+
+    <h1>Salutare, oameni buni!</h1>
+    <p>Folositi metoda getElementsByTagName pentru a modifica culorile indicate in paragrafele alaturate, precum si titlul paginii !</p>
+    <p>Acest text va fi colorat folosind JavaScript.</p>
+
+    <script>
+        // 1. Modificare titlu pagină
+        document.title = "Titlu Nou - L6_2";
+
+        // 2. Selectare toate paragrafele
+        var p = document.getElementsByTagName("p");
+
+        // Fundal modificat pentru primul paragraf
+        p[0].style.backgroundColor = "yellow";
+
+        // Culoare text modificată pentru ultimul paragraf
+        p[p.length - 1].style.color = "red";
+    </script>
+
+    <p><a href="index.html">Înapoi la meniu</a></p>
+</body>
+</html>

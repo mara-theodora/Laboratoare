@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>L6_C</title>
+<script>
+function culoareValida(c){
+    return CSS.supports("color", c)
+}
+function modifica_culoare(id){
+    var culoare=prompt("Introduceti culoarea noua:");
+     if (culoareValida(culoare)){
+        document.getElementById(id).style.color=culoare;
+    }
+}
+function modifica_fundal(id){
+    var culoare=prompt("Introduceti culoarea noua:");
+     if (culoareValida(culoare)){
+        document.getElementById(id).style.backgroundColor=culoare;
+    }
+}
+</script>
+</head>
+<body>
+
+<h1 id="h1" onclick="modifica_culoare(id)">Acesta este un titlu</h1>
+
+<p id="p1" onclick="modifica_fundal(id)">
+Linia 1<br>
+Linia 2<br>
+Linia 3
+</p>
+
+
+</body>
+</html> 

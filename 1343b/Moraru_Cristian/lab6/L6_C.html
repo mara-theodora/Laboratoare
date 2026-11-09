@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercitiul 4</title>
+</head>
+
+<body>
+
+    <h1 id="titlu">Schimbare Culori</h1>
+
+    <p id="paragraf">
+        Paragraf 1<br>
+        Paragraf 2<br>
+        Paragraf 3
+    </p>
+
+    <script>
+
+        // La click pe titlu
+        document.getElementById("titlu").onclick = function () {
+
+            var c = prompt("Introduceti culoarea textului:");
+
+            if (c != null && CSS.supports("color", c)) {
+                this.style.color = c;
+            }
+            else if (c != null) {
+                alert("Culoare incorecta!");
+            }
+
+        };
+
+        // La click pe paragraf
+        document.getElementById("paragraf").onclick = function () {
+
+            var c = prompt("Introduceti culoarea de fundal:");
+
+            if (c != null && CSS.supports("color", c)) {
+                this.style.backgroundColor = c;
+            }
+            else if (c != null) {
+                alert("Culoare incorecta!");
+            }
+
+        };
+
+    </script>
+
+</body>
+</html>

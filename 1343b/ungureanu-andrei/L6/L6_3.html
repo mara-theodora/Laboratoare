@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Modificare folosind clase
+</title>
+</head>
+<body>
+
+<h1> Utilizati Javascript si HTML DOM (metoda getElementsByClassName() ) pentru a modifica culorile asa cum se indica mai jos </h1>
+
+<div class="yb">
+<br />
+<p class='by'>Text <br /> albastru <br /> pe fond <br />galben</p>
+<br />
+<p class="yb">Text <br /> galben <br /> pe fond <br />albastru</p>
+<br />
+</div>
+
+<div class="by">
+<br />
+<p class='by'>Alt text <br /> albastru <br /> pe fond <br />galben</p>
+<br />
+<p class='yb'>Alt text <br /> galben <br /> pe fond <br />albastru</p>
+<br />
+</div>
+
+<script>
+// Utilizati getElementsByClassName() si element.style.color/backgroundColor pentru a modifica culorile paragrafelor asa cum se specifica!
+
+let elementeBY = document.getElementsByClassName("by");
+
+for (let i = 0; i < elementeBY.length; i++) {
+    elementeBY[i].style.color = "blue";
+    elementeBY[i].style.backgroundColor = "yellow";
+}
+
+let elementeYB = document.getElementsByClassName("yb");
+
+for (let i = 0; i < elementeYB.length; i++) {
+    elementeYB[i].style.color = "yellow";
+    elementeYB[i].style.backgroundColor = "blue";
+}
+
+</script>
+
+</body>
+</html>

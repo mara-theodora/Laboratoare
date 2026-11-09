@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Modificari paragrafe</title>
+<script>
+    function schimbator(){
+    const paragrafe= document.getElementsByTagName('p'); 
+    const culorifundal = ['blue', 'yellow','green'];
+
+    for(let i=0; i<paragrafe.length; i++){
+        paragrafe[i].textContent = 'Acesta este paragraful '+(i+1);
+         paragrafe[i].style.color = '#0066CC';
+          paragrafe[i].style.backgroundColor = culorifundal[i]; 
+    }
+}
+</script>
+</head>
+<body>
+
+<h1>Modificari paragrafe la click pe buton</h1>
+
+<p>Acesta este un paragraf</p>
+
+<p>Si acesta este un paragraf</p>
+
+<p>Acesta este inca un paragraf</p>
+
+<button type="button" onclick="schimbator()" >Apasa-ma!</button>
+
+</body>
+</html> 

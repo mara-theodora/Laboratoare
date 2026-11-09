@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Laborator 6 - C</title>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+            padding: 10px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 onclick="schimbaCuloareTitlu()">
+        Exercitiul patru JavaScript
+    </h1>
+
+    <p onclick="schimbaFundal()">
+        Acesta este primul rand de text.<br>
+        Acesta este al doilea rand de text.<br>
+        Acesta este al treilea rand de text.
+    </p>
+
+    <script>
+        function schimbaCuloareTitlu() {
+            let c = prompt("Introduceti culoarea titlului:");
+
+            if (c !== null) {
+                if (CSS.supports("color", c)) {
+                    document.querySelector("h1").style.color = c;
+                } else {
+                    alert("Culoare invalida!");
+                }
+            }
+        }
+
+        function schimbaFundal() {
+            let c = prompt("Introduceti culoarea de fundal:");
+
+            if (c !== null) {
+                if (CSS.supports("color", c)) {
+                    document.querySelector("p").style.backgroundColor = c;
+                } else {
+                    alert("Culoare invalida!");
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

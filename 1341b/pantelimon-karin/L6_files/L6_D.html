@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercițiul Galerie foto - Lab 6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .galerie-container {
+            display: inline-block;
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        img {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+            display: block;
+            margin: 0 auto 15px auto;
+        }
+        button {
+            padding: 8px 16px;
+            margin: 0 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #infoText {
+            margin: 10px 0;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="galerie-container">
+        <h2>Galerie Foto</h2>
+        
+        <img id="imagineCurenta" src="" alt="Imagine galerie">
+        
+        <p id="infoText"></p>
+
+        <div>
+            <button id="btnInapoi">&larr; Înapoi</button>
+            <button id="btnInainte">Înainte &rarr;</button>
+        </div>
+    </div>
+
+    <script>
+
+        var imagini = [
+            "Img/caini.jpg",
+            "Img/pisici.jpg",
+            "Img/mare.jpg",
+            "Img/munti.jpg"
+        ];
+
+        var indexCurent = 0;
+
+        var imgElement = document.getElementById("imagineCurenta");
+        var infoElement = document.getElementById("infoText");
+        var btnInapoi = document.getElementById("btnInapoi");
+        var btnInainte = document.getElementById("btnInainte");
+
+        function afiseazaImagine() {
+            imgElement.src = imagini[indexCurent];
+            infoElement.innerText = "Imaginea " + (indexCurent + 1) + " din " + imagini.length;
+        }
+
+        afiseazaImagine();
+
+        btnInainte.onclick = function () {
+            indexCurent++;
+            
+            if (indexCurent >= imagini.length) {
+                indexCurent = 0;
+            }
+            
+            afiseazaImagine();
+        };
+
+        btnInapoi.onclick = function () {
+            indexCurent--; 
+            
+            if (indexCurent < 0) {
+                indexCurent = imagini.length - 1;
+            }
+            
+            afiseazaImagine();
+        };
+    </script>
+
+</body>
+</html>

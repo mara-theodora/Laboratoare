@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+<title>L6_C</title>
+</head>
+<body>
+
+<h1 id="titlu" onclick="schimbaCuloareTitlu()">Titlu de modificat culoarea</h1>
+
+<p id="paragraf" onclick="schimbaFundalParagraf()">Linia 1 de text<br>Linia 2 de text<br>Linia 3 de text</p>
+
+<script>
+function schimbaCuloareTitlu() {
+    var c = prompt("Introduceti culoarea textului pentru titlu:");
+    if (c !== null && c !== "") {
+        if (CSS.supports("color", c)) {
+            document.getElementById("titlu").style.color = c;
+        } else {
+            alert("Culoare invalida!");
+        }
+    }
+}
+
+function schimbaFundalParagraf() {
+    var c = prompt("Introduceti culoarea de fundal pentru paragraf:");
+    if (c !== null && c !== "") {
+        if (CSS.supports("color", c)) {
+            document.getElementById("paragraf").style.backgroundColor = c;
+        } else {
+            alert("Culoare invalida!");
+        }
+    }
+}
+</script>
+
+</body>
+</html>

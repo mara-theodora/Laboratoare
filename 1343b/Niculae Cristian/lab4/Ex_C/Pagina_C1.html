@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS_C1 - Exercițiul 6</title>
+<style>
+    /* Titlul paginii și paragraful rămân nemodificate */
+    #hd {
+        font-variant: small-caps;
+        color: magenta;
+    }
+    
+    p {
+        text-align: center;
+        color: red;
+    }
+
+    body {
+        background-color: #ffffcc;
+    }
+
+    /* Setări generale tabel și chenare verzi contopite */
+    table {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    table, th, td {
+        border: 2px solid green;
+        border-collapse: collapse;
+    }
+
+    /* 1. Titlu (caption) alb, mare, pe fond portocaliu */
+    caption {
+        background-color: orange;
+        color: white;
+        font-size: 1.4em;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    /* 2. Antet pe fond magenta */
+    th {
+        background-color: magenta;
+        color: white;
+        padding: 15px;
+        text-align: center;
+    }
+
+    /* 3. Celule portocaliute cu spațiu generos */
+    td {
+        background-color: orange;
+        color: black;
+        padding: 15px; /* Spațiu generos între text și chenar */
+    }
+
+    /* 4. Celulele cu numele echipelor (care au rowspan) magenta, îngroșate și centrate */
+    td[rowspan] {
+        background-color: magenta;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<h1 id="hd">Tabel special</h1>
+<p>Un tabel cu "celule lipite"</p> 
+
+<table>
+  <caption>Echipe și hobby-uri</caption>
+  <tr>
+    <th>Echipa</th>
+    <th>Nume</th>
+    <th colspan="2">Pasiuni</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Munte</td>
+    <td>Popescu</td>
+    <td>călătorii</td>
+    <td>filatelie</td>
+  </tr>
+  <tr>
+    <td>Ionescu</td>
+    <td>planorism</td>
+    <td>șah</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Mare</td>
+    <td>Georgescu</td>
+    <td>plajă</td>
+    <td>dans</td>
+  </tr>
+  <tr>
+    <td>Gigescu</td>
+    <td>surf</td>
+    <td>samba</td>
+  </tr>
+  <tr>
+    <td>Mintescu</td>
+    <td>politică</td>
+    <td>delicatețuri</td>
+  </tr>
+</table>
+
+</body>
+</html>

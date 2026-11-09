@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Laborator 6 - L6_B</title>
+</head>
+<body>
+
+<button id="btnSchimba">Schimbă paragrafele între ele</button>
+
+<p id="p1" style="color: darkblue; font-weight: bold; cursor: pointer;">
+    Acesta este primul paragraf (text albastru și îngroșat). Dă clic pe mine pentru a-mi schimba textul!
+</p>
+
+<p id="p2" style="color: darkred; font-style: italic; background-color: #f0f0f0; padding: 5px; cursor: pointer;">
+    Acesta este al doilea paragraf (text roșu, înclinat și cu fundal gri). Dă clic pe mine pentru a-mi schimba textul!
+</p>
+
+<script>
+var par1 = document.getElementById("p1");
+var par2 = document.getElementById("p2");
+var btn = document.getElementById("btnSchimba");
+
+// Funcție pentru schimbarea textului la clic pe paragraf
+function modificaText() {
+    var textNou = prompt("Introduceți noul text pentru acest paragraf:", this.innerHTML);
+    if (textNou !== null && textNou !== "") {
+        this.innerHTML = textNou;
+    }
+}
+
+// Atașarea evenimentelor de clic pe cele două paragrafe
+par1.onclick = modificaText;
+par2.onclick = modificaText;
+
+// Atașarea evenimentului de clic pe buton pentru interschimbarea conținutului
+btn.onclick = function () {
+    var aux = par1.innerHTML;
+    par1.innerHTML = par2.innerHTML;
+    par2.innerHTML = aux;
+};
+</script>
+
+</body>
+</html>

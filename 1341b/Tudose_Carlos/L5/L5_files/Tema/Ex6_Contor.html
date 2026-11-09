@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exercitiul 6 - Bonus</title>
+<script>
+var contor = 0;
+
+function comutaBec() {
+    var bec = document.getElementById("bec");
+    var mesaj = document.getElementById("mesaj");
+
+    if (bec.src.match("stins")) {
+        bec.src = "Bec aprins.gif";
+        contor++;
+        mesaj.innerHTML = "Becul a fost aprins de " + contor + " ori.";
+    } else {
+        bec.src = "Bec stins.gif";
+    }
+}
+</script>
+</head>
+<body>
+
+<h1>Contor aprinderi bec</h1>
+
+<img id="bec" src="Bec stins.gif" width="100" height="180" onclick="comutaBec()">
+
+<p id="mesaj">Becul a fost aprins de 0 ori.</p>
+
+</body>
+</html>

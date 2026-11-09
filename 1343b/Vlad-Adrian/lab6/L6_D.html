@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Laborator 6 - Galerie Foto (Bonus)</title>
+</head>
+
+<body>
+
+    <h1>Galerie Foto</h1>
+
+    <img id="poza" src="Img/pisici.jpg" alt="Galerie" width="320" height="240">
+    <br><br>
+
+    <button id="btnInapoi">Înapoi</button>
+    <button id="btnInainte">Înainte</button>
+
+    <p id="info">Imaginea 1 din 4</p>
+
+    <script>
+        var imagini = [
+            "Img/pisici.jpg",
+            "Img/caini.jpg",
+            "Img/munti.jpg",
+            "Img/mare.jpg"
+        ];
+        var index = 0;
+
+        var poza = document.getElementById("poza");
+        var info = document.getElementById("info");
+        var btnInapoi = document.getElementById("btnInapoi");
+        var btnInainte = document.getElementById("btnInainte");
+
+        function actualizeaza() {
+            poza.src = imagini[index];
+            info.innerHTML = "Imaginea " + (index + 1) + " din " + imagini.length;
+        }
+
+        btnInainte.onclick = function () {
+            index = (index + 1) % imagini.length;
+            actualizeaza();
+        };
+
+        btnInapoi.onclick = function () {
+            index = (index - 1 + imagini.length) % imagini.length;
+            actualizeaza();
+        };
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Laboratorul 3 – Stiluri CSS</title>
+    <link rel="stylesheet" href="myStyle.css">
+    <style>
+        ul.meniu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        ul.meniu a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: sans-serif;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        .b1 {
+            background-color: blue;
+        }
+        .b2 {
+            background-color: green;
+        }
+        .b3 {
+            background-color: red;
+        }
+        .b4 {
+            background-color: purple;
+        }
+        .b5 {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Laboratorul 3 – Stiluri CSS</h1>
+    <ul class="meniu">
+        <li><a href="FormtareText.html" class="b1">Formatare text</a></li>
+        <li><a href="FormtareText_inline.html" class="b2">Stiluri inline</a></li>
+        <li><a href="FormtareText_internal.html" class="b3">Stiluri interne</a></li>
+        <li><a href="FormtareText_external.html" class="b4">Stiluri externe</a></li>
+        <li><a href="../index.html" class="b5">Laboratoarele mele</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>L6_A</title>
+</head>
+<body>
+    <p id="par">Text initial</p>
+
+    <script>
+        var text = prompt("Introduceți noul text al paragrafului:", "Text initial");
+        if (text !== null && text !== "") {
+            document.getElementById("par").innerHTML = text;
+        }
+    </script>
+
+    <p><a href="index.html">Înapoi la laboratorul 6</a></p>
+</body>
+</html>

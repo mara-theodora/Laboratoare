@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercițiul 7 - L6_js</title>
+</head>
+<body>
+
+    <script>
+        // Creare titlu mare albastru
+        var h1 = document.createElement("h1");
+        h1.style.color = "blue";
+        h1.style.fontSize = "2.5em";
+        h1.innerHTML = "Titlu Generat din JavaScript";
+        document.body.appendChild(h1);
+
+        // Creare paragraf pe trei linii cu fundal galben
+        var p = document.createElement("p");
+        p.style.backgroundColor = "yellow";
+        p.style.lineHeight = "1.6";
+        p.style.padding = "10px";
+        p.innerHTML = "Prima linie generată dinamic.<br>A doua linie generată dinamic.<br>A treia linie generată dinamic.";
+        document.body.appendChild(p);
+    </script>
+
+</body>
+</html>

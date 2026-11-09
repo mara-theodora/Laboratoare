@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Preferinte TV</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin-top: 15px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Chenarul roz/magenta pentru toate celulele */
+    th, td {
+      border: 3px solid black;
+      padding: 8px 20px;
+      text-align: center;
+    }
+
+    /* Antetul și prima coloană au fundal albastru deschis (cyan/lightcyan) */
+    th, .prima-coloana {
+      background-color: pink;
+      color: black;
+    }
+
+    /* Celulele cu date au fundal verde deschis și text maro */
+    .date-celula {
+      background-color: green;
+      color: #8b2500;
+    }
+  </style>
+</head>
+<body>
+
+  <div style="background-color:Cornsilk">
+    <a href="index.html">Acasa</a>
+    <br>
+    <a href="filme.html">Preferinte TV</a>
+    <br>
+    <a href="muzici.html">Preferinte muzicale</a>
+    <br>
+    <hr>
+  </div>
+
+  <div>
+    <h1>Filme si seriale</h1>
+  </div>
+
+  <!-- Tabelul conform imaginii -->
+  <table>
+    <thead>
+      <tr>
+        <!-- Celula din colțul stânga-sus este goală -->
+        <th></th>
+        <th>Ziua</th>
+        <th>Post TV</th>
+        <th>Emisiune</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- Prima coloană este o singură celulă întinsă pe 5 rânduri -->
+        <td rowspan="5" class="prima-coloana"><b>Emisiuni TV preferate</b></td>
+        <td class="date-celula">Luni</td>
+        <td class="date-celula">Antena 1</td>
+        <td class="date-celula">Chefi la cutite</td>
+      </tr>
+      <tr>
+        <td class="date-celula">Marți</td>
+        <td class="date-celula">PRO TV</td>
+        <td class="date-celula">Master chef</td>
+      </tr>
+      <tr>
+        <td class="date-celula">Miercuri</td>
+        <td class="date-celula">PrimaTv</td>
+        <td class="date-celula">Cronica Cârcotașilor</td>
+      </tr>
+      <tr>
+        <td class="date-celula">Joi</td>
+        <td class="date-celula">Digi sport 1</td>
+        <td class="date-celula">Stiri</td>
+      </tr>
+      <tr>
+        <td class="date-celula">Vineri</td>
+        <td class="date-celula">Cartoon Network</td>
+        <td class="date-celula">Scooby Doo</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

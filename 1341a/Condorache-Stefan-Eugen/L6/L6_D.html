@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Laborator 6 - Bonus (L6_D)</title>
+</head>
+<body>
+
+    <h2>Galerie foto</h2>
+
+    <img id="poza" src="Img/pisici.jpg" alt="Imagine galerie" width="320" height="240">
+
+    <p id="contor">Imaginea 1 din 4</p>
+
+    <button id="btnInapoi">Înapoi</button>
+    <button id="btnInainte">Înainte</button>
+
+    <script>
+        var imagini = [
+            "Img/pisici.jpg",
+            "Img/caini.jpg",
+            "Img/munti.jpg",
+            "Img/mare.jpg"
+        ];
+
+        var pozitie = 0;
+
+        var imgElement = document.getElementById("poza");
+        var textContor = document.getElementById("contor");
+        var btnInapoi = document.getElementById("btnInapoi");
+        var btnInainte = document.getElementById("btnInainte");
+
+        function actualizeazaGalerie() {
+            imgElement.src = imagini[pozitie];
+            textContor.innerHTML = "Imaginea " + (pozitie + 1) + " din " + imagini.length;
+        }
+
+        // Butonul "Înainte": trece la următoarea imagine; după ultima revine la prima (0)
+        btnInainte.onclick = function () {
+            pozitie = (pozitie + 1) % imagini.length;
+            actualizeazaGalerie();
+        };
+
+        // Butonul "Înapoi": trece la imaginea anterioară; înainte de prima (0) trece la ultima
+        btnInapoi.onclick = function () {
+            pozitie = (pozitie - 1 + imagini.length) % imagini.length;
+            actualizeazaGalerie();
+        };
+    </script>
+
+</body>
+</html>

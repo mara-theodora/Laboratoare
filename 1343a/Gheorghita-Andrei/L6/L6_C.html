@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div>
+        <h1 id="h1">Titlu sectiunii</h1>
+
+        <script>
+            var culoare = prompt("Introduceți o noua culoare pentru titlu:");
+            if (culoare != null && culoare != "") {
+            if(CSS.supports("color", culoare)) {
+                document.getElementById("h1").style.color = culoare;
+            } else {
+                alert("Culoarea introdusă nu este validă. Vă rugăm să introduceți o culoare validă.");
+            }
+            }
+        </script>
+
+        <p id="p">
+            Ieri a fost o zi ploioasa. Iar astazi va fi la fel. <br />
+            De 3 zile ploua incontinuu. <br />
+            Iar ploaia nu se mai opreste. <br />
+        </p>
+    </div>
+</body>
+</html>

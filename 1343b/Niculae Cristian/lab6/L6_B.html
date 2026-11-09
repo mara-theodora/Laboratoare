@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercițiul 3 - L6_B</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .paragraf1 { color: darkblue; font-weight: bold; cursor: pointer; }
+        .paragraf2 { color: darkgreen; font-style: italic; cursor: pointer; }
+        button { margin-top: 15px; padding: 8px 15px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <p id="p1" class="paragraf1">Acesta este primul paragraf. Faceți clic pentru a modifica textul.</p>
+    <p id="p2" class="paragraf2">Acesta este al doilea paragraf. Faceți clic pentru a modifica textul.</p>
+    
+    <button id="btnSchimba">Schimbă conținutul între ele</button>
+
+    <script>
+        // Clic pe primul paragraf
+        document.getElementById("p1").addEventListener("click", function() {
+            var textNou = prompt("Introduceți noul text pentru primul paragraf:", this.innerHTML);
+            if (textNou !== null && textNou !== "") {
+                this.innerHTML = textNou;
+            }
+        });
+
+        // Clic pe al doilea paragraf
+        document.getElementById("p2").addEventListener("click", function() {
+            var textNou = prompt("Introduceți noul text pentru al doilea paragraf:", this.innerHTML);
+            if (textNou !== null && textNou !== "") {
+                this.innerHTML = textNou;
+            }
+        });
+
+        // Clic pe buton pentru interschimbarea conținuturilor
+        document.getElementById("btnSchimba").addEventListener("click", function() {
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+            var temp = p1.innerHTML;
+            p1.innerHTML = p2.innerHTML;
+            p2.innerHTML = temp;
+        });
+    </script>
+
+</body>
+</html>

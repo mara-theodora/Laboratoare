@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Modificari cu JavaScript in tag</title>
+</head>
+<body>
+
+<h1>Modificari paragraf la click pe buton</h1>
+
+<!-- 1. Am adăugat un paragraf cu un id pentru a-l putea identifica -->
+<p id="paragraf">Acesta este un paragraf de modificat.</p>
+
+<!-- 2. Am adăugat atributul onclick în buton -->
+<button onclick="document.getElementById('paragraf').style.backgroundColor = 'pink'; document.getElementById('paragraf').style.color = 'red';">
+    Click!
+</button>
+
+</body>
+</html>

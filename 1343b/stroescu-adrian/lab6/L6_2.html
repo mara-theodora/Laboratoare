@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Acest titlu va fi modificat cu JS</title>
+</head>
+<body>
+
+    <p>Salutare, <br /> oameni buni! <br /> (De modificat culoarea de background cu js!)</p>
+
+    <p>Folositi metoda <b>getElementsByTagName</b> pentru a modifica culorile indicate in paragrafele alaturate, <br /> precum si titlul paginii !</p>
+
+    <p>Acest text va fi colorat <br/>folosind <br /> JavaScript</p>
+
+    <script>
+        document.title = "Titlu modificat prin JS";
+        var paragrafe = document.getElementsByTagName("p");
+        paragrafe[0].style.backgroundColor = "lightyellow";
+        var ultimul = paragrafe[paragrafe.length - 1];
+        ultimul.style.color = "darkred";
+        ultimul.style.backgroundColor = "#e0e0e0";
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Galerie imagini</title>
+</head>
+<body>
+
+<img id="galerie-img" src="Img/Pisici.jpg" alt="Imagine galerie" width="160" height="120">
+<br /><br />
+<button id="inapoi">Inapoi</button>
+<button id="inainte">Inainte</button>
+<p id="counter">Imaginea 1 din 4</p>
+
+<script>
+var imagini = ["Img/Pisici.jpg", "Img/Pesti.jpg", "Img/Munti.jpg", "Img/Caini.jpg"];
+var indexCurent = 0;
+
+var imgElement = document.getElementById("galerie-img");
+var counterElement = document.getElementById("counter");
+var btnInapoi = document.getElementById("inapoi");
+var btnInainte = document.getElementById("inainte");
+
+function actualizeazaImagine() {
+    imgElement.src = imagini[indexCurent];
+    counterElement.textContent = "Imaginea " + (indexCurent + 1) + " din " + imagini.length;
+}
+
+btnInainte.addEventListener("click", function() {
+    indexCurent = (indexCurent + 1) % imagini.length;
+    actualizeazaImagine();
+});
+
+btnInapoi.addEventListener("click", function() {
+    indexCurent = (indexCurent - 1 + imagini.length) % imagini.length;
+    actualizeazaImagine();
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>L6_5</title>
+</head>
+<body>
+
+    <p>Utilizati JavaScript si HTML DOM pentru a inlocui imaginile de mai jos asa cum este indicat in textele de deasupra lor</p>
+
+    <p>La click vor aparea Pisici</p>
+    <img src="Pesti.jpg" alt="Pesti" width="150">
+
+    <p>La mouseover vor aparea Munti</p>
+    <img src="desert.jpg" alt="Desert" width="150">
+
+    <p>La click vor aparea Caini</p>
+    <img src="egrete.jpg" alt="Egrete" width="150">
+
+    <p>la mouseout va aparea o Mare</p>
+    <img src="jungla.jpg" alt="Jungla" width="150">
+
+    <script>
+        // Selectăm toate imaginile din pagină sub formă de colecție
+        var img = document.getElementsByTagName("img");
+
+        // 1. La click vor apărea Pisici (prima imagine)
+        img[0].onclick = function() {
+            this.src = "Img/pisici.jpg";
+        };
+
+        // 2. La mouseover vor apărea Munți (a doua imagine)
+        img[1].onmouseover = function() {
+            this.src = "Img/munti.jpg";
+        };
+
+        // 3. La click vor apărea Câini (a treia imagine)
+        img[2].onclick = function() {
+            this.src = "Img/caini.jpg";
+        };
+
+        // 4. La mouseout va apărea o Mare (a patra imagine)
+        img[3].onmouseout = function() {
+            this.src = "Img/mare.jpg";
+        };
+    </script>
+
+    <p><a href="index.html">Înapoi la meniu</a></p>
+</body>
+</html>

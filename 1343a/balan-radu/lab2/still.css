@@ -1,0 +1,51 @@
+
+meniu a:hover {
+    color: #ff6600; 
+}
+
+.activ {
+    font-weight: bold;
+    text-decoration: none;
+    pointer-events: none; 
+}
+
+.descriere {
+    background-color: yellow;
+    color: blue;
+    padding: 10px;
+ }
+  table {
+        border-collapse: collapse;
+        width: 90%;
+        margin: 20px auto;
+        text-align: center;
+    }
+    th,
+    td {
+        border: 3px solid magenta;
+        padding: 8px;
+    }
+    .antet {
+        background-color: lightblue;
+    }
+    .ziua {
+        background-color: lightgreen;
+        color: red;
+    }
+    .post-tv{
+        background-color: lightgreen;
+        color: red;
+    }
+    .emisiune{
+        background-color: lightgreen;
+        color: red;
+    }
+    .titlu{
+        background-color: lightblue;
+        font-weight: bold;
+        text-align: center;
+    }   
+     .lista-muzica{
+        background-color: lightcoral;
+        color: blueviolet;
+    }

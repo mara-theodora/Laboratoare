@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        function Switch() {
+            var vector = document.getElementsByTagName("p");
+            
+            var temp = vector[0].innerHTML;
+            vector[0].innerHTML = vector[1].innerHTML;
+            vector[1].innerHTML = temp;
+
+            temp = vector[0].style.color;
+            vector[0].style.color = vector[1].style.color;
+            vector[1].style.color = temp;
+        }
+        function NewText(id) {
+            var text = prompt("Introduceți noul text al paragrafului:");
+
+            if (text !== null && text !== "") {
+                document.getElementById(id).textContent = text;
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="butt" type="button" onclick="Switch()">Switch</button>
+    <p id="p1" style="color:red" onclick="NewText('p1')">Paragraf A</p>
+    <p id="p2" style="color:blue" onclick="NewText('p1')">Paragraf B</p>
+</body>
+</html>

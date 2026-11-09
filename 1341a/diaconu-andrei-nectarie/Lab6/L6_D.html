@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Galerie Foto (Bonus)</title>
+</head>
+<body>
+    <div>
+        <button id="btnInapoi">Inapoi</button>
+        <button id="btnInainte">Inainte</button>
+    </div>
+    <br>
+    <img id="imagineGalerie" src="Img/pisici.jpg" alt="Galerie" width="400">
+    <p id="textContor">Imaginea 1 din 4</p>
+
+    <script>
+        var imagini = ["Img/pisici.jpg", "Img/munti.jpg", "Img/caini.jpg", "Img/mare.jpg"];
+        var pozitieCurenta = 0;
+
+        var imgElement = document.getElementById("imagineGalerie");
+        var textContor = document.getElementById("textContor");
+        var btnInapoi = document.getElementById("btnInapoi");
+        var btnInainte = document.getElementById("btnInainte");
+
+        function actualizeazaGalerie() {
+            imgElement.src = imagini[pozitieCurenta];
+            textContor.innerHTML = "Imaginea " + (pozitieCurenta + 1) + " din " + imagini.length;
+        }
+
+        btnInapoi.onclick = function() {
+            pozitieCurenta = (pozitieCurenta - 1 + imagini.length) % imagini.length;
+            actualizeazaGalerie();
+        };
+
+        btnInainte.onclick = function() {
+            pozitieCurenta = (pozitieCurenta + 1) % imagini.length;
+            actualizeazaGalerie();
+        };
+    </script>
+</body>
+</html>

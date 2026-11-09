@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercitiul 3</title>
+
+    <style>
+        p {
+            cursor: pointer;
+        }
+
+        #p1 {
+            color: blue;
+            font-size: 20px;
+        }
+
+        #p2 {
+            color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="schimba()">Schimba paragrafele</button>
+
+    <p id="p1" onclick="modifica(this)">
+        Acesta este primul paragraf.
+    </p>
+
+    <p id="p2" onclick="modifica(this)">
+        Acesta este al doilea paragraf.
+    </p>
+
+    <script>
+        function modifica(paragraf) {
+            let textNou = prompt("textul nou:");
+
+            if (textNou !== null) {
+                paragraf.innerHTML = textNou;
+            }
+        }
+
+        function schimba() {
+            let p1 = document.getElementById("p1");
+            let p2 = document.getElementById("p2");
+
+            let aux = p1.innerHTML;
+            p1.innerHTML = p2.innerHTML;
+            p2.innerHTML = aux;
+        }
+    </script>
+
+</body>
+</html>

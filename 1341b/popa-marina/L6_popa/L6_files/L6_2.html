@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Acest titlu va fi modificat cu JS</title>
+  </head>
+  <body>
+    <p>
+      Salutare, <br />
+      oameni buni! <br />
+      (De modificat culoarea de background cu js!)
+    </p>
+
+    <p>
+      Folositi metoda <b>getElementsByTagName</b> pentru a modifica culorile
+      indicate in paragrafele alaturate, <br />
+      precum si titlul paginii !
+    </p>
+
+    <p>
+      Acest text va fi colorat <br />folosind <br />
+      JavaScript
+    </p>
+    <script>
+      // 1. Modificarea titlului paginii
+      document.title = "Laborator 6 - Titlu Modificat";
+
+      // 2. Selectarea tuturor paragrafelor din pagina
+      var p = document.getElementsByTagName("p");
+
+      // 3. Primul paragraf [0] - culoarea de background
+      p[0].style.backgroundColor = "lightyellow";
+
+      // 4. Ultimul paragraf [p.length - 1] - culoarea textului
+      p[p.length - 1].style.color = "red";
+    </script>
+  </body>
+</html>

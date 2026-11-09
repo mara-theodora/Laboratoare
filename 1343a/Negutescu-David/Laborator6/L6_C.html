@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Document creat cu JavaScript</title>
+</head>
+<body>
+    <h1 onclick="Cere()" id="header">Titlu.</h1>
+    <p id="p1">
+        Prima linie.
+        A doua linie.
+        A treia Linie
+    </p>
+    <script>
+       var title=document.getElementById("header")
+	function Cere(){
+        var color=prompt("Schimba Culoarea","color")
+        if(CSS.supports("color",color)){
+        title.style.color=color;
+    } else alert("Culoarea nu este valabila")
+}
+	</script>
+</body>
+</html>

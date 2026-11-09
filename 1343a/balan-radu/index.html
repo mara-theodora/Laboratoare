@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina principala</title>
+    <style>
+        ul.meniu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        ul.meniu a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: sans-serif;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        ul.meniu a:hover{
+            color: aqua;
+        }
+
+        .b1 {
+            background-color: blue;
+        }
+        .b2 {
+            background-color: green;
+        }
+        .b3 {
+            background-color: red;
+        }
+        .b4 {
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>Laboratorele mele</h1>
+    <p>Programarea aplicatiilor web - Seria MIAI</p>
+    <ul class="meniu">
+        <li><a href = "L1/" class="b1">Laboratorul 1</a></li>
+        <li><a href = "L2/" class="b2">Laboratorul 2</a></li>
+        <li><a href=" L3/" class="b3">Laboratorul 3 – Publicare site și CSS</a></li>
+        <li><a href=" lab6/" class="b4">Laboratorul 6 – JavaScript și DOM</a></li>
+    </ul>
+</body>
+</html>

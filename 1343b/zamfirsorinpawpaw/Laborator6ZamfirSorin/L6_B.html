@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>L6_B</title>
+    <style>
+        #p1 { color: darkblue; background-color: #e6f2ff; padding: 10px; cursor: pointer; }
+        #p2 { color: darkred; background-color: #ffe6e6; padding: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <button id="btnInversare">Schimbă conținutul paragrafelor între ele</button>
+    <br><br>
+    <p id="p1">Primul paragraf (Text A)</p>
+    <p id="p2">Al doilea paragraf (Text B)</p>
+
+    <script>
+        var p1 = document.getElementById("p1");
+        var p2 = document.getElementById("p2");
+        var btn = document.getElementById("btnInversare");
+
+        p1.onclick = function() {
+            var val = prompt("Modifică primul paragraf:", p1.innerHTML);
+            if (val !== null && val !== "") {
+                p1.innerHTML = val;
+            }
+        };
+
+        p2.onclick = function() {
+            var val = prompt("Modifică al doilea paragraf:", p2.innerHTML);
+            if (val !== null && val !== "") {
+                p2.innerHTML = val;
+            }
+        };
+
+        btn.onclick = function() {
+            var aux = p1.innerHTML;
+            p1.innerHTML = p2.innerHTML;
+            p2.innerHTML = aux;
+        };
+    </script>
+
+    <p><a href="index.html">Înapoi la laboratorul 6</a></p>
+</body>
+</html>

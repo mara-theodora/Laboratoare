@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercițiul 3 - L6_B</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #p1 {
+            color: #1a0dab;
+            font-style: italic;
+            background-color: #e8f0fe;
+            padding: 12px;
+            border-left: 4px solid #1a0dab;
+            cursor: pointer;
+        }
+
+        #p2 {
+            color: #0d652d;
+            font-weight: bold;
+            background-color: #e6f4ea;
+            padding: 12px;
+            border-left: 4px solid #0d652d;
+            cursor: pointer;
+        }
+
+        p:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btnSchimba">Schimbă conținutul paragrafelor</button>
+
+    <p id="p1">Acesta este primul paragraf. Este formatat cu text italic și fundal albastru deschis. Dă clic pe el pentru a-l modifica!</p>
+    <p id="p2">Acesta este al doilea paragraf. Este formatat cu text îngroșat (bold) și fundal verde deschis. Dă clic pe el pentru a-l modifica!</p>
+
+    <script>
+        const btnSchimba = document.getElementById('btnSchimba');
+        const p1 = document.getElementById('p1');
+        const p2 = document.getElementById('p2');
+
+        p1.addEventListener('click', function() {
+            let textNou = prompt("Introduceți un text nou pentru primul paragraf:", p1.textContent);
+            if (textNou !== null && textNou.trim() !== "") {
+                p1.textContent = textNou;
+            }
+        });
+
+        p2.addEventListener('click', function() {
+            let textNou = prompt("Introduceți un text nou pentru al doilea paragraf:", p2.textContent);
+            if (textNou !== null && textNou.trim() !== "") {
+                p2.textContent = textNou;
+            }
+        });
+
+        btnSchimba.addEventListener('click', function() {
+            let temp = p1.textContent;
+            p1.textContent = p2.textContent;
+            p2.textContent = temp;
+        });
+    </script>
+
+</body>
+</html>

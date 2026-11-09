@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modificari paragrafe</title>
+
+    <script>
+
+        function p1_nou(){
+        var x = document.getElementById("p1_nou");
+        x.innerHTML = "Acesta este paragraful 1";
+        x.style.backgroundColor = "red";
+        }
+
+        function p2_nou(){
+        var x = document.getElementById("p2_nou");
+        x.innerHTML = "Acesta este paragraful 2";
+        x.style.backgroundColor = "green";
+        }
+
+        function p3_nou(){
+        var x = document.getElementById("p3_nou");
+        x.innerHTML = "Acesta este paragraful 3";
+        x.style.backgroundColor = "blue";
+        }
+
+    </script>
+
+</head>
+<body>
+
+<h1>Modificari paragrafe la click pe buton</h1>
+
+<p id="p1_nou">Acesta este un paragraf</p>
+
+
+<p id="p2_nou">Si acesta este un paragraf</p>
+
+<p id="p3_nou">Acesta este inca un paragraf</p>
+
+<!--Un singur buton pentru toate paragrafele -->
+<button type="button" onclick="p1_nou(); p2_nou(); p3_nou()">Apasa-ma!</button>
+
+
+</body>
+</html> 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Bec cu contor</title>
+
+  <script>
+    var contor = 0;
+
+    function comuta() {
+        var bec = document.getElementById("bec");
+        console.log(bec.src);
+
+        if (bec.src.match("stins")) {
+            bec.src = "Bec aprins.gif";
+            contor = contor + 1;
+            document.getElementById("mesaj").innerHTML =
+                "Becul a fost aprins de " + contor + " ori.";
+        } else {
+            bec.src = "Bec stins.gif";
+        }
+    }
+  </script>
+</head>
+<body>
+
+  <h1>Bec cu contor</h1>
+
+  <img id="bec" src="Bec stins.gif" width="100" height="180" onclick="comuta()">
+
+  <p id="mesaj">Becul a fost aprins de 0 ori.</p>
+
+</body>
+</html>

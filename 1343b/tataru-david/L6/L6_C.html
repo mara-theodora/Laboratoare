@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ro">
+<body>
+<h1 onclick="modificaTitlu(this)">Titlu principal</h1>
+<p onclick="modificaParagraf(this)">Linia 1<br>Linia 2<br>Linia 3</p>
+
+<script>
+function modificaTitlu(element) {
+    var cul = prompt("Culoare text titlu:");
+    if (cul) {
+        if (CSS.supports("color", cul)) element.style.color = cul;
+        else alert("Culoare invalida!");
+    }
+}
+
+function modificaParagraf(element) {
+    var cul = prompt("Culoare fundal paragraf:");
+    if (cul) {
+        if (CSS.supports("color", cul)) element.style.backgroundColor = cul;
+        else alert("Culoare invalida!");
+    }
+}
+</script>
+</body>
+</html>
